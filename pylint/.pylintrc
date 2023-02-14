@@ -1,0 +1,16 @@
+# https://stackoverflow.com/questions/4341746/how-do-i-disable-a-pylint-warning
+[BASIC]
+function-rgx=[A-Za-z0-9_]{1,30}$
+extension-pkg-whitelist=cv2
+
+[FORMAT]
+max-line-length=100
+
+[VARIABLES]
+# http://pylint-messages.wikidot.com/messages:c0103
+variable-rgx=[A-Za-z0-9_]{1,30}$
+argument-rgx=[A-Za-z0-9_]{1,30}$
+attr-rgx=[A-Za-z0-9_]{1,30}$
+
+[MESSAGES CONTROL]
+disable=R0914,R0915,R1702,R0912,C0111,C1801,W0702,W0614,W0401,D100,D103

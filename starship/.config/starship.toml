@@ -1,0 +1,72 @@
+format = """
+$directory\
+$git_branch\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+$cmd_duration $jobs $time $hostname\
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+[directory]
+style = "bold blue"
+read_only = " "
+truncation_length = 3
+truncate_to_repo = false
+
+[character]
+success_symbol = "[❯](cyan)"
+error_symbol = "[❯](red)"
+vicmd_symbol = "[❮](green)"
+
+[git_branch]
+symbol = " "
+format = "[$symbol$branch]($style) "
+style = "purple"
+
+[jobs]
+symbol = ""
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "cyan"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "#FF8C00"
+
+[memory_usage]
+symbol = " "
+
+[time]
+disabled = false
+style = "bold #FF8C00"
+format = "[$time]($style)"
+time_format = "%k:%M"
+
+# [hostname]
+# ssh_only = false
+# format = "<[$hostname]($style)>"
+# trim_at = "-"
+# style = "bold dimmed white"
+# disabled = true
+
+[hostname]
+ssh_only = false
+format = "[❮]($style)[$hostname]($style)[❯]($style)"
+style = "blue"
+disabled = false

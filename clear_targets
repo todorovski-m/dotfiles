@@ -1,0 +1,21 @@
+#!/bin/bash
+for name in nvim picom polybar zathura kitty ranger i3 zsh
+do
+    file_name=~/.config/$name
+    file_type=$(file -b $file_name | awk '{print $1;}')
+    if [ $file_type == "directory" ]
+    then
+        rm -rf $file_name
+        echo "Deleted directory: $file_name"
+    else
+        rm $file_name
+        echo "Deleted file: $file_name"
+    fi
+done
+
+for name in .pylintrc .tmux.conf .zshrc
+do
+    file_name=~/$name
+    rm $file_name
+    echo "Deleted file: $file_name"
+done

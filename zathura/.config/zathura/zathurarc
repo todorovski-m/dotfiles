@@ -1,0 +1,17 @@
+set default-fg "#abb2bf"
+set recolor-darkcolor "#abb2bf"
+set default-bg "#1e222a"
+set recolor-lightcolor "#1e222a"
+
+set highlight-color "#575268"
+set highlight-fg "#f5bde6"
+set highlight-active-color "#f5bde6"
+
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set adjust-open "width"
+map c recolor
+set synctex true
+set synctex-editor-command "nvr --remote-silent %f -c %l"
+
+set recolor "true"

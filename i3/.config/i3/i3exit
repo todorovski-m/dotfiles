@@ -1,0 +1,45 @@
+#!/bin/bash
+lock() {
+
+    # https://github.com/grwlf/xkb-switch
+    # change keyboard layout to "us"
+    xkb-switch -s "us"
+
+    # lock image location
+    img="$HOME/lock.png"
+    # icon to be placed in the center
+    icon="$HOME/.config/i3/lock_01.png"
+    # get screen size
+    size=$(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/')
+    # make a transparent image to match the screen size and put icon in the center
+    convert -size $size xc:transparent $icon -gravity center -composite $img
+
+    # lock the screen
+    i3lock -e -c 000000 -i $img
+}
+
+case "$1" in
+    lock)
+        lock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        lock && systemctl suspend
+        ;;
+    hibernate)
+        lock && systemctl hibernate
+        ;;
+    reboot)
+        systemctl reboot
+        ;;
+    shutdown)
+        systemctl poweroff
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0

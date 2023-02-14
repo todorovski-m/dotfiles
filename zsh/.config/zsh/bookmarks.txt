@@ -1,0 +1,12 @@
+~/Dropbox/Mirko
+~/Dropbox/Mirko/research
+~/Dropbox/Mirko/research/grcev/induktivnost/
+~/Dropbox/Mirko/research/current_components_2023
+~/Dropbox/Mirko/dotfiles
+~/Dropbox
+~/Dropbox/razmena
+~/Desktop
+~/Documents
+~/Downloads
+~/Pictures
+~/Videos

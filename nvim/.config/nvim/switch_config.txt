@@ -1,0 +1,10 @@
+https://www.reddit.com/r/neovim/comments/p9z2ii/test_a_different_neovim_configuration/
+https://www.reddit.com/r/neovim/comments/p9z2ii/test_a_different_neovim_configuration/ha1ojzs/
+
+Default location
+XDG_CONFIG_HOME=~/.config
+XDG_DATA_HOME=~/.local/share
+
+Another location
+export XDG_CONFIG_HOME=~/lunarvim && export XDG_DATA_HOME=~/lunarvim/data
+Both directories have to contain directory nvim
