@@ -11,9 +11,15 @@
 ## style-6     style-7     style-8     style-9     style-10
 
 dir="$HOME/.config/rofi/adi1090x/launchers/type-7"
-theme='style-6'
+theme="style-6"
 
 ## Run
+if [ -z "$1" ]
+then
+      mode="drun"
+else
+      mode=$1
+fi
 rofi \
-    -show drun \
+    -show $mode \
     -theme ${dir}/${theme}.rasi
