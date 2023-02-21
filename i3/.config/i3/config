@@ -38,8 +38,8 @@ bindsym $alt+F4 kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run
-bindsym $mod+r exec ~/.config/rofi/adi1090x/launchers/type-7/launcher.sh
-bindsym $mod+Shift+w exec ~/.config/rofi/adi1090x/launchers/type-7/launcher.sh window
+bindsym $mod+r exec ~/.config/scripts/launcher.sh
+bindsym $mod+Shift+w exec ~/.config/scripts/launcher.sh window
 # Print Screen
 bindsym Print exec ~/.config/rofi/adi1090x/applets/bin/screenshot.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
@@ -166,15 +166,16 @@ bindsym $mod+Ctrl+Left resize grow width 5 px or 5 ppt
 
 bindsym $mod+w exec firefox
 bindsym $mod+e exec thunderbird
-bindsym $mod+p exec code
+bindsym $mod+p exec $HOME/programs/vscode/bin/code
 bindsym $mod+f exec caja
-bindsym $mod+t exec ~/programs/Telegram/Telegram
-bindsym $mod+z exec zathura ~/Dropbox/Mirko/REES/rees.pdf
-bindsym $mod+g exec ~/.config/greek/greek.sh
+bindsym $mod+t exec $HOME/programs/Telegram/Telegram
+bindsym $mod+z exec zathura $HOME/Dropbox/Mirko/REES/rees.pdf
+bindsym $mod+g exec $HOME/.config/greek/greek.sh
 bindsym $mod+c exec foliate ~/win-data/knigi/chess/Irving\ Chernev\ -\ Logical\ Chess\ -\ Move\ By\ Move.epub
-bindsym $mod+Shift+c exec ~/Dropbox/Mirko/Razno/chess/chernev-open.sh
+bindsym $mod+Shift+c exec $HOME/Dropbox/Mirko/Razno/chess/chernev-open.sh
+bindsym $mod+l exec $HOME/.config/scripts/predavanja.sh
 # make this link: ln -s ~/Dropbox/Mirko/dropbox.py ~/.local/bin/dropbox
-exec --no-startup-id ~/Dropbox/Mirko/dropbox.py start
+exec --no-startup-id dropbox start
 # polkit authetication agent (needed for packages install)
 # install polkit and polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -232,7 +233,7 @@ mode "$mode_system" {
 }
 bindsym $mod+x mode "$mode_system"
 
-exec_always --no-startup-id $HOME/Dropbox/Mirko/set_resolution.sh
+exec_always --no-startup-id $HOME/.config/scripts/set_resolution.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id /usr/bin/nm-applet
 
