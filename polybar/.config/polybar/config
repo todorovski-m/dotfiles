@@ -115,7 +115,7 @@ label-mode-background = ${colors.orange}
 ; focused = Active workspace on focused monitor
 label-focused = %name% %icon%
 label-focused-foreground = ${colors.foreground}
-; label-focused-background = ${colors.orange}
+label-focused-background =
 label-focused-underline= ${colors.orange}
 label-focused-padding = 1
 label-focused-font = 7
@@ -187,7 +187,7 @@ format-muted-prefix = 
 format-muted-prefix-foreground = ${colors.red}
 label-volume = %percentage%%
 label-muted = " Muted"
-label-muted-foreground = ${color.sep}
+label-muted-foreground = ${colors.sep}
 ; Only applies if <ramp-volume> is used
 ramp-volume-0 = 
 ramp-volume-1 = 
@@ -272,7 +272,7 @@ type = custom/text
 content = 
 content-font = 7
 content-foreground = ${colors.foreground}
-click-left = ~/.config/rofi/adi1090x/launchers/type-7/launcher.sh window
+click-left = ~/.config/scripts/launcher.sh window
 
 [module/battery]
 type = internal/battery
