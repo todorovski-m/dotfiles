@@ -184,9 +184,6 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # Num lock
 exec_always /usr/bin/numlockx on
 
-# Display wallpaper
-exec_always feh --bg-fill /home/mirko/Dropbox/wallpapers/pexels-james-wheeler-417074.jpg
-
 # Assign programs to workspaces
 # use xprop (sudo apt install xprobe) to find program class
 assign [class="kitty"] $ws1
@@ -234,7 +231,9 @@ mode "$mode_system" {
 }
 bindsym $mod+x mode "$mode_system"
 
-exec_always --no-startup-id $HOME/.config/scripts/set_resolution.sh
+# Set resolution and display wallpaper
+exec_always --no-startup-id $HOME/.config/scripts/set_resolution.sh; feh --bg-fill /home/mirko/Dropbox/wallpapers/pexels-james-wheeler-417074.jpg
+
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id /usr/bin/nm-applet
 
