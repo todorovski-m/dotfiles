@@ -12,6 +12,8 @@ setopt extendedhistory
 setopt hist_ignore_all_dups # do not save duplicate commands to history
 setopt hist_find_no_dups # do not find duplicate command when searching
 
+# load and unload environment variables depending on the current directory (.envrc)
+eval "$(direnv hook zsh)"
 
 # plugins
 plug "zsh-users/zsh-autosuggestions"

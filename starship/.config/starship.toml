@@ -4,6 +4,7 @@ $git_branch\
 $git_state\
 $git_status\
 $git_metrics\
+$python\
 $fill\
 $cmd_duration $jobs $time $hostname\
 $line_break\
@@ -70,3 +71,7 @@ ssh_only = false
 format = "[❮]($style)[$hostname]($style)[❯]($style)"
 style = "blue"
 disabled = false
+
+[python]
+format = "[${symbol}${version}]($style)"
+style = "bold #FF8C00"
