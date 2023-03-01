@@ -199,6 +199,7 @@ assign [class="Telegram"] $ws7
 
 # Programs that start as floating
 for_window [class="Weather"] floating enable
+for_window [class="Matplotlib"] floating enable
 
 # Change the keyboard layouts
 # https://superuser.com/questions/1147320/how-to-change-keyboard-layout-in-i3
