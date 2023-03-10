@@ -166,7 +166,7 @@ bindsym $mod+Ctrl+Left resize grow width 5 px or 5 ppt
 
 bindsym $mod+w exec firefox
 bindsym $mod+e exec thunderbird
-bindsym $mod+p exec $HOME/programs/vscode/bin/code
+bindsym $mod+Shift+p exec $HOME/programs/vscode/bin/code
 bindsym $mod+f exec caja
 bindsym $mod+t exec $HOME/programs/Telegram/Telegram
 bindsym $mod+z exec xdg-open `cat $HOME/Dropbox/Mirko/bookmark`
@@ -242,3 +242,12 @@ exec_always --no-startup-id /usr/bin/nm-applet
 # config file: ~/.config/picom/picom.conf
 # https://www.reddit.com/r/i3wm/comments/s59e7n/weird_picom_issues/
 exec_always --no-startup-id sleep 3 && picom -b
+
+set $mode_password (c) copy password, (t) type login and password
+mode "$mode_password" {
+    bindsym c exec "$HOME/.config/scripts/passScript.sh", mode "default"
+    bindsym t exec "$HOME/.config/scripts/passScript.sh --type", mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+p mode "$mode_password"
