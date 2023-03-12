@@ -36,6 +36,7 @@ packer.init {
       return require("packer.util").float { border = "rounded" }
     end,
   },
+  max_jobs = 16, -- Limit the number of simultaneous jobs. nil means no limit
 }
 
 -- Install your plugins here
@@ -179,6 +180,15 @@ return packer.startup(function(use)
 
     -- Displaying the colours in the file
     use {"rrethy/vim-hexokinase", run = "make"}
+
+    -- Generate annotation for function, class or other relevant type
+    use {
+        "danymat/neogen",
+        config = function()
+            require('neogen').setup {}
+        end,
+        requires = "nvim-treesitter/nvim-treesitter",
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
