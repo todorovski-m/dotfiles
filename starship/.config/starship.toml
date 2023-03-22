@@ -75,3 +75,4 @@ disabled = false
 [python]
 format = "[${symbol}${version}]($style)"
 style = "bold #FF8C00"
+symbol = " "
