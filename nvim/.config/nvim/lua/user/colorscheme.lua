@@ -9,3 +9,5 @@ vim.opt.termguicolors = true
 -- vim.cmd("colorscheme codemonkey")
 -- vim.cmd("colorscheme onedark")
 vim.cmd("colorscheme onedarker")
+
+vim.cmd("hi TreesitterContextBottom gui=underline guisp=Grey")
