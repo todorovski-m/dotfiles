@@ -205,5 +205,33 @@
         "prefix": "lr[",
         "body": "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]",
         "description": "left[ ... right]"
+    },
+    "Columns": {
+        "prefix": "cols",
+        "body": [
+            "\\begin{columns}[t]",
+            "\t\\begin{column}{0.5\\textwidth}",
+            "\t\t\\centering",
+            "\t\t$1",
+            "\t\\end{column}",
+            "\t\\begin{column}{0.5\\textwidth}",
+            "\t\t\\centering",
+            "\t\t$2",
+            "\t\\end{column}",
+            "\\end{columns}",
+            "$0"
+        ],
+        "description": "Add columns"
+    },
+    "Frame": {
+        "prefix": "frm",
+        "body": [
+            "\\begin{frame}[t]{$1}",
+            "\\scriptsize",
+            "$2",
+            "\\end{frame}",
+            "$0"
+        ],
+        "description": "Insert beamer frame"
     }
 }
