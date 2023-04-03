@@ -96,9 +96,10 @@
     "Tabular": {
         "prefix": "tab",
         "body": [
-            "\\\\begin{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${2:c}}",
-            "$0${2/((?<=[clr])([ |]*(c|l|r)))|./(?1: & )/g}",
-            "\\\\end{${1:t}${1/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}"
+            "\\begin{tabular}{ll}",
+            "\\tiny",
+            "a & b \\\\",
+            "\\end{tabular}"
         ],
         "description": "Tabular"
     },
@@ -209,7 +210,7 @@
     "Columns": {
         "prefix": "cols",
         "body": [
-            "\\begin{columns}[t]",
+            "\\begin{columns}",
             "\t\\begin{column}{0.5\\textwidth}",
             "\t\t\\centering",
             "\t\t$1",
