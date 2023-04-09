@@ -185,9 +185,6 @@ return packer.startup(function(use)
     -- Generate annotation for function, class or other relevant type
     use {
         "danymat/neogen",
-        config = function()
-            require('neogen').setup {}
-        end,
         requires = "nvim-treesitter/nvim-treesitter",
     }
 
