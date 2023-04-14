@@ -96,6 +96,8 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
+bindsym $mod+n move workspace to output next
+
 # move focused window
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
@@ -175,6 +177,7 @@ bindsym $mod+c exec foliate ~/win-data/knigi/chess/Irving\ Chernev\ -\ Logical\ 
 bindsym $mod+Shift+c exec $HOME/Dropbox/Mirko/Razno/chess/chernev-open.sh
 bindsym $mod+l exec $HOME/.config/scripts/predavanja.sh
 bindsym $mod+m exec $HOME/.config/rofi/rofi-network-manager/rofi-network-manager.sh
+bindsym $mod+Shift+t exec $HOME/.config/scripts/two_monitors.sh
 # make this link: ln -s ~/Dropbox/Mirko/dropbox.py ~/.local/bin/dropbox
 exec --no-startup-id dropbox start
 # polkit authetication agent (needed for packages install)
@@ -193,6 +196,7 @@ assign [class="thunderbird"] $ws3
 assign [class="Emacs"] $ws4
 assign [class="Code"] $ws4
 assign [class="Caja"] $ws5
+assign [class="Pdfpc"] $ws5
 assign [class="Octave"] $ws6
 assign [class="MATLAB R2016b"] $ws6
 assign [class="Telegram"] $ws7
