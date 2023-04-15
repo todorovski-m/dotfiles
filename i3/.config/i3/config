@@ -139,7 +139,6 @@ bindsym $mod+Shift+Tab workspace prev
 
 # switch between the current and the previously focused workspace
 bindsym $mod+b workspace back_and_forth
-bindsym $mod+Shift+b move container to workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -238,7 +237,8 @@ mode "$mode_system" {
 bindsym $mod+x mode "$mode_system"
 
 # Set resolution and display wallpaper
-exec_always --no-startup-id $HOME/.config/scripts/set_resolution.sh; feh --bg-fill /home/mirko/Dropbox/wallpapers/pexels-james-wheeler-417074.jpg
+exec_always --no-startup-id $HOME/.config/scripts/set_resolution.sh; $HOME/.fehbg
+bindsym $mod+Shift+b exec sxiv -t $HOME/Pictures/Wallpapers
 
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id /usr/bin/nm-applet
