@@ -256,3 +256,8 @@ mode "$mode_password" {
     bindsym Escape mode "default"
 }
 bindsym $mod+p mode "$mode_password"
+
+bindsym $mod+y move position center
+bindsym $mod+Shift+i move scratchpad
+bindsym $mod+Ctrl+i exec $HOME/.config/scripts/rofi_scratchpad.sh
+bindsym $mod+i scratchpad show
