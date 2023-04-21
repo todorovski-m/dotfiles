@@ -261,3 +261,10 @@ bindsym $mod+y move position center
 bindsym $mod+Shift+i move scratchpad
 bindsym $mod+Ctrl+i exec $HOME/.config/scripts/rofi_scratchpad.sh
 bindsym $mod+i scratchpad show
+
+# Use octave as calculator
+for_window [instance="calculator"] floating enable
+for_window [instance="calculator"] resize set 800 600
+for_window [instance="calculator"] border pixel 5
+for_window [instance="calculator"] move position center
+bindsym $mod+k exec kitty --class calculator -o font_size=18 -e octave -q
