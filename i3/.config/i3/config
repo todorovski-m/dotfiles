@@ -268,3 +268,6 @@ for_window [instance="calculator"] resize set 800 600
 for_window [instance="calculator"] border pixel 5
 for_window [instance="calculator"] move position center
 bindsym $mod+k exec kitty --class calculator -o font_size=18 -e octave -q
+
+# Launch Conky
+exec_always --no-startup-id $HOME/.config/conky/launch-conky.sh
