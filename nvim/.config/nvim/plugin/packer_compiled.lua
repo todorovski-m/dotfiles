@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/mirko/.local/share/nvim/site/pack/packer/start/darkplus.nvim",
     url = "https://github.com/lunarvim/darkplus.nvim"
   },
+  ["dracula.nvim"] = {
+    loaded = true,
+    path = "/home/mirko/.local/share/nvim/site/pack/packer/start/dracula.nvim",
+    url = "https://github.com/Mofiqul/dracula.nvim"
+  },
   ["dressing.nvim"] = {
     loaded = true,
     path = "/home/mirko/.local/share/nvim/site/pack/packer/start/dressing.nvim",

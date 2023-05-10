@@ -91,6 +91,7 @@ return packer.startup(function(use)
     use "EdenEast/nightfox.nvim"
     use "rose-pine/neovim"
     use "rebelot/kanagawa.nvim"
+    use "Mofiqul/dracula.nvim"
 
     -- Completion plugins
     use "hrsh7th/nvim-cmp" -- the completion plugin
