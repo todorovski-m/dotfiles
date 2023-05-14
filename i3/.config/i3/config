@@ -271,3 +271,7 @@ bindsym $mod+k exec kitty --class calculator -o font_size=18 -e octave -q
 
 # Launch Conky
 exec_always --no-startup-id $HOME/.config/conky/launch-conky.sh
+
+# i3-layouts
+set $i3l 2columns to workspace $ws1
+exec_always $HOME/anaconda3/bin/i3-layouts
