@@ -176,7 +176,7 @@ bindsym $mod+c exec foliate ~/win-data/knigi/chess/Irving\ Chernev\ -\ Logical\ 
 bindsym $mod+Shift+c exec $HOME/Dropbox/Mirko/Razno/chess/chernev-open.sh
 bindsym $mod+l exec $HOME/.config/scripts/predavanja.sh
 bindsym $mod+m exec $HOME/.config/rofi/rofi-network-manager/rofi-network-manager.sh
-bindsym $mod+Shift+t exec $HOME/.config/scripts/two_monitors.sh
+bindsym $mod+Shift+t exec $HOME/.config/scripts/two_monitors.py
 # make this link: ln -s ~/Dropbox/Mirko/dropbox.py ~/.local/bin/dropbox
 exec --no-startup-id dropbox start
 # polkit authetication agent (needed for packages install)
