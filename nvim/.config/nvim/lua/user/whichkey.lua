@@ -203,6 +203,14 @@ local mappings = {
     l = { "<cmd>GdbLopenBreakpoints<cr>", "Load breakpoint locations into list"},
     k = { "<cmd>GdbLopenBacktrace<cr>", "Load backtrace locations into list"},
     q = { "<cmd>GdbDebugStop<cr>", "Exit GDB"},
+  },
+  m = {
+    name = "Macros",
+    q = { "<cmd>lua require('NeoComposer.macro').toggle_record()<cr>", "Record macro (q)"},
+    Q = { "<cmd>lua require('NeoComposer.macro').toggle_play_macro()<cr>", "Play macro (Q)"},
+    s = { "<cmd>lua require('NeoComposer.macro').halt_macro()<cr>", "Stop macro (cq)"},
+    y = { "<cmd>lua require('NeoComposer.macro').yank_macro()<cr>", "Copy macro (cq)"},
+    m = { "<cmd>lua require('NeoComposer.ui').toggle_macro_menu()<cr>", "Macro menu (<M-q>)"},
   }
 }
 

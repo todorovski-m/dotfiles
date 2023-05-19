@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/home/mirko/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["NeoComposer.nvim"] = {
+    loaded = true,
+    path = "/home/mirko/.local/share/nvim/site/pack/packer/start/NeoComposer.nvim",
+    url = "https://github.com/ecthelionvi/NeoComposer.nvim"
+  },
   ale = {
     loaded = true,
     path = "/home/mirko/.local/share/nvim/site/pack/packer/start/ale",
@@ -333,6 +338,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mirko/.local/share/nvim/site/pack/packer/start/registers.nvim",
     url = "https://github.com/tversteeg/registers.nvim"
+  },
+  ["sqlite.lua"] = {
+    loaded = true,
+    path = "/home/mirko/.local/share/nvim/site/pack/packer/start/sqlite.lua",
+    url = "https://github.com/kkharji/sqlite.lua"
   },
   ["telescope-dap.nvim"] = {
     loaded = true,

@@ -189,6 +189,12 @@ return packer.startup(function(use)
         requires = "nvim-treesitter/nvim-treesitter",
     }
 
+    -- Macro management and execution
+    use {
+        "ecthelionvi/NeoComposer.nvim",
+        requires = { "kkharji/sqlite.lua" }
+    }
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
