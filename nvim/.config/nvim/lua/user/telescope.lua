@@ -96,4 +96,15 @@ telescope.setup {
     -- }
     -- please take a look at the readme of the extension you want to configure
   },
+  vimgrep_arguments = {
+    "rg",
+    -- "--color=never",
+    "--with-filename",
+    "--line-number",
+    "--ignore-case",
+    "--recursive",
+    "--no-messages",
+    "--exclude-dir=*cache*",
+    "--exclude-dir=*.git",
+ },
 }
