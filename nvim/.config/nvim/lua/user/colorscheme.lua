@@ -7,8 +7,8 @@ vim.opt.termguicolors = true
 -- vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme kanagawa")
 -- vim.cmd("colorscheme codemonkey")
-vim.cmd("colorscheme onedark")
--- vim.cmd("colorscheme onedarker")
+-- vim.cmd("colorscheme onedark")
+vim.cmd("colorscheme onedarker")
 vim.cmd("highlight clear SignColumn")
 vim.cmd("highlight clear LineNr")
 
