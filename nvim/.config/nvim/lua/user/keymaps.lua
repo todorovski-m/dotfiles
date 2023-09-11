@@ -81,9 +81,9 @@ vim.g["NERDCustomDelimiters"] = {
     python = {left = "#"}
 }
 vim.g["NERDSpaceDelims"] = 1 -- add spaces after comment delimiters
-vim.cmd("map <C-/> <leader>c<space>")
+vim.cmd("map <C-/> \\c<space>")
 -- for some reason, vim registers <C-/> as <C-_> (this is in tmux also)
-vim.cmd("map <C-_> <leader>c<space>")
+vim.cmd("map <C-_> \\c<space>")
 
 -- Save file
 keymap("n", "<C-s>", ":update<CR>", opts)
