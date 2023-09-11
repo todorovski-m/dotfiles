@@ -81,7 +81,6 @@ local plugins = {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
     },
-    "JoosepAlviste/nvim-ts-context-commentstring",
     "nvim-treesitter/playground",
     "nvim-treesitter/nvim-treesitter-context",
 
