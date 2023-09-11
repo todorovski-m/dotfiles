@@ -72,6 +72,8 @@ local plugins = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+    -- A pretty list for showing diagnostics
+    "folke/trouble.nvim",
 
     -- Telescope
     "nvim-telescope/telescope.nvim",

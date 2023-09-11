@@ -161,7 +161,8 @@ local mappings = {
     C = { "<cmd>Telescope commands<cr>", "Commands" },
     H = { "<cmd>Telescope command_history<cr>", "Command History" },
   },
-  t = { "<cmd>UndotreeToggle<CR>", "Undo Tree" },
+  t = { "<cmd>TroubleToggle<CR>", "Toggle Diagnostics" },
+  T = { "<cmd>UndotreeToggle<CR>", "Undo Tree" },
   D = {
       name = "Debug",
       r = { "<cmd>lua require'dap'.run_to_cursor()<cr>", "Run to Cursor" },
