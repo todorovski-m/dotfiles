@@ -27,7 +27,11 @@ dashboard.section.buttons.val = {
 local function footer()
   local datetime = os.date "%d.%m.%Y"
   local v = vim.version()
-  local plugins_count = vim.fn.len(vim.fn.globpath("~/.local/share/nvim/site/pack/packer/start", "*", 0, 1))
+  local plugins_count = 0
+  local plugins = require('lazy').plugins()
+  for _, _ in pairs(plugins) do
+      plugins_count = plugins_count + 1
+  end
   return string.format("v%d.%d.%d    %s    %d plugins", v.major, v.minor, v.patch, datetime, plugins_count)
 end
 
