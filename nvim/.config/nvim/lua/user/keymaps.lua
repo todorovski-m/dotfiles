@@ -103,13 +103,6 @@ keymap("x", "ga", "<Plug>(EasyAlign)", opts)
 -- Start interactive EasyAlign for a motion/text object (e.g. gaip)
 keymap("n", "ga", "<Plug>(EasyAlign)", opts)
 
--- Terminal --
--- Better terminal navigation
--- keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
--- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
--- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
--- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-
 -- Better vertical movements (center the view after certain movement)
 keymap("n", "<C-d>", "<C-d>zz", opts)
 keymap("n", "<C-u>", "<C-u>zz", opts)

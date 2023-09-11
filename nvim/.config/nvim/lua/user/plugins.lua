@@ -24,7 +24,6 @@ local plugins = {
     "machakann/vim-sandwich",
     -- Commenter
     "scrooloose/nerdcommenter",
-    -- use "numToStr/Comment.nvim"
 
     -- A File Explorer
     "kyazdani42/nvim-web-devicons",
@@ -32,11 +31,7 @@ local plugins = {
 
     "akinsho/bufferline.nvim",
     "nvim-lualine/lualine.nvim",
-    "antoinemadec/FixCursorHold.nvim", -- needed to fix lsp doc highlight
     "folke/which-key.nvim",
-
-    -- Toggle terminal
-    "akinsho/toggleterm.nvim",
 
     -- Greeter
     "goolord/alpha-nvim",
