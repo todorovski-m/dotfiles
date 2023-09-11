@@ -1,6 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-    ensure_installed = { "lua_ls", "pyright", "fortls" }
+    ensure_installed = { "lua_ls", "jedi_language_server", "fortls" }
 })
 
 -- https://github.com/jmbuhr/quarto-nvim-kickstarter/blob/20c693ebf136421bd6c23a2f5ff46abeeb3fa360/lua/plugins/quarto.lua#L173
