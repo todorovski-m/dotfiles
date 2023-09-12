@@ -79,6 +79,8 @@ local opts = {
 }
 
 local mappings = {
+  ["L"] = { "<cmd>Lazy<cr>", "Plugin manager (lazy.nvim)" },
+  ["M"] = { "<cmd>Mason<cr>", "LSP manager (mason)" },
   ["z"] = { "<cmd>lua ExportColorsZathura()<cr>", "Export colors to zathura" },
   ["k"] = { "<cmd>lua ExportColorsKitty()<cr>", "Export colors to kitty" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
