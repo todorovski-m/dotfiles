@@ -4,7 +4,7 @@ function-rgx=[A-Za-z0-9_]{1,30}$
 extension-pkg-whitelist=cv2
 
 [FORMAT]
-max-line-length=100
+max-line-length=120
 
 [VARIABLES]
 # http://pylint-messages.wikidot.com/messages:c0103
@@ -13,4 +13,4 @@ argument-rgx=[A-Za-z0-9_]{1,30}$
 attr-rgx=[A-Za-z0-9_]{1,30}$
 
 [MESSAGES CONTROL]
-disable=R0914,R0915,R1702,R0912,C0111,C1801,W0702,W0614,W0401,D100,D103
+disable=R0914,R0915,R1702,R0912,C0111,C1801,W0702,W0614,W0401,D100,D103,W1514,R1732,C0103

@@ -74,6 +74,8 @@ local plugins = {
     "neovim/nvim-lspconfig",
     -- A pretty list for showing diagnostics
     "folke/trouble.nvim",
+    -- Linting
+    "jose-elias-alvarez/null-ls.nvim",
 
     -- Telescope
     "nvim-telescope/telescope.nvim",
