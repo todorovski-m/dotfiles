@@ -1,33 +1,38 @@
-require "user.options"
-require "user.plugins"
-require "user.keymaps"
-require "user.colorscheme"
-require "user.setspell"
-require "user.cmp"
-require "user.telescope"
-require "user.treesitter"
-require "user.autopairs"
-require "user.gitsigns"
-require "user.nvim-tree"
-require "user.bufferline"
-require "user.lualine"
-require "user.terminator"
-require "user.ale"
-require "user.autocommands"
-require "user.whichkey"
-require "user.alpha"
-require "user.vimtex"
-require "user.session"
-require "user.easyclip"
-require "user.dap"
-require "user.orgmode"
-require "user.leap"
-require "user.todo"
-require "user.nvimgdb"
-require "user.functions"
-require "user.context"
-require "user.neogen"
-require "user.macros"
-require "user.lsp-config"
-require "user.diagnostics"
-require "user.null-ls"
+vim.g.mapleader = " "
+vim.g.maplocalleader = ","
+
+require("config.bootstrap")
+require("lazy").setup("plugins")
+
+require("config.options")
+require("config.keymaps")
+require("config.colorscheme")
+require("config.setspell")
+require("config.cmp")
+require("config.telescope")
+require("config.treesitter")
+require("config.autopairs")
+require("config.gitsigns")
+require("config.nvim-tree")
+require("config.bufferline")
+require("config.lualine")
+require("config.terminator")
+require("config.ale")
+require("config.autocommands")
+require("config.whichkey")
+require("config.alpha")
+require("config.vimtex")
+require("config.session")
+require("config.easyclip")
+require("config.dap")
+require("config.orgmode")
+require("config.leap")
+require("config.todo")
+require("config.nvimgdb")
+require("config.functions")
+require("config.context")
+require("config.neogen")
+require("config.macros")
+require("config.lsp-config")
+require("config.diagnostics")
+require("config.null-ls")
