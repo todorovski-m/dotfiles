@@ -64,9 +64,6 @@ return {
     -- Linting
     "jose-elias-alvarez/null-ls.nvim",
 
-    -- Telescope
-    "nvim-telescope/telescope.nvim",
-
     -- Treesitter
     {
         "nvim-treesitter/nvim-treesitter",
@@ -85,9 +82,6 @@ return {
     -- Align text
     "junegunn/vim-easy-align",
 
-    -- LaTex
-    "lervag/vimtex",
-
     -- Simplified clipboard functionality
     "svermeulen/vim-easyclip",
 
@@ -101,7 +95,6 @@ return {
     -- UI/UX extensions for nvim-dap that provide a better user experience
     "rcarriga/nvim-dap-ui",
     "theHamsta/nvim-dap-virtual-text",
-    "nvim-telescope/telescope-dap.nvim",
 
     -- Indentation guides to all lines
     "lukas-reineke/indent-blankline.nvim",
