@@ -2,7 +2,8 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 require("config.bootstrap")
-require("lazy").setup("plugins")
+local opts = require("config.lazy-defaults")
+require("lazy").setup("plugins", opts) -- lua/plugins/init.lua
 
 require("config.options")
 require("config.keymaps")

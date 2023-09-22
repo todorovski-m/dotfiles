@@ -2,6 +2,7 @@ return {
    -- A File Explorer
   "nvim-tree/nvim-tree.lua",
   cmd = { "NvimTreeToggle" },
+  event = { "DirChanged" },
   dependencies = {
     "nvim-tree/nvim-web-devicons",
   },

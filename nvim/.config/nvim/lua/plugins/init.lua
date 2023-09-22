@@ -32,22 +32,23 @@ return {
     "joshdick/onedark.vim",
     "morhetz/gruvbox",
     "LunarVim/Colorschemes",
-    "catppuccin/nvim",
+    -- "catppuccin/nvim",
     "EdenEast/nightfox.nvim",
     "rose-pine/neovim",
     "rebelot/kanagawa.nvim",
     "Mofiqul/dracula.nvim",
+    "folke/tokyonight.nvim",
 
     -- Completion plugins
-    "hrsh7th/nvim-cmp", -- the completion plugin
-    "hrsh7th/cmp-buffer", -- buffer completions
-    "hrsh7th/cmp-path", -- path completions
-    "hrsh7th/cmp-nvim-lsp",
+    {"hrsh7th/nvim-cmp", lazy = true}, -- the completion plugin
+    {"hrsh7th/cmp-buffer", lazy = true}, -- buffer completions
+    {"hrsh7th/cmp-path", lazy = true}, -- path completions
+    {"hrsh7th/cmp-nvim-lsp", lazy = true},
 
     -- Snippets
-    {"L3MON4D3/LuaSnip", event = {"InsertEnter"}}, --snippet engine <== this is required for "hrsh7th/nvim-cmp" to work!
-    {"rafamadriz/friendly-snippets", event = {"InsertEnter"}}, -- a bunch of snippets to use
-    {"saadparwaiz1/cmp_luasnip", event = {"InsertEnter"}}, -- snippet completions
+    {"L3MON4D3/LuaSnip", lazy = true}, --snippet engine <== this is required for "hrsh7th/nvim-cmp" to work!
+    {"rafamadriz/friendly-snippets", lazy = true}, -- a bunch of snippets to use
+    {"saadparwaiz1/cmp_luasnip", lazy = true}, -- snippet completions
 
     -- LSP
     "williamboman/mason.nvim",
