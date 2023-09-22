@@ -39,16 +39,24 @@ return {
     "Mofiqul/dracula.nvim",
     "folke/tokyonight.nvim",
 
-    -- Completion plugins
-    {"hrsh7th/nvim-cmp", lazy = true}, -- the completion plugin
-    {"hrsh7th/cmp-buffer", lazy = true}, -- buffer completions
-    {"hrsh7th/cmp-path", lazy = true}, -- path completions
-    {"hrsh7th/cmp-nvim-lsp", lazy = true},
+    -- Completion plugin
+    {"hrsh7th/nvim-cmp",
+        lazy = true,
+        dependencies = {
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-nvim-lsp",
+            "saadparwaiz1/cmp_luasnip"
+        },
+    },
 
     -- Snippets
-    {"L3MON4D3/LuaSnip", lazy = true}, --snippet engine <== this is required for "hrsh7th/nvim-cmp" to work!
-    {"rafamadriz/friendly-snippets", lazy = true}, -- a bunch of snippets to use
-    {"saadparwaiz1/cmp_luasnip", lazy = true}, -- snippet completions
+    {"L3MON4D3/LuaSnip", --snippet engine <== this is required for "hrsh7th/nvim-cmp" to work!
+        lazy = true,
+        dependencies = {
+            "rafamadriz/friendly-snippets",
+        },
+    },
 
     -- LSP
     "williamboman/mason.nvim",
