@@ -12,10 +12,6 @@ return {
     -- Commenter
     "scrooloose/nerdcommenter",
 
-    -- A File Explorer
-    "kyazdani42/nvim-web-devicons",
-    "kyazdani42/nvim-tree.lua",
-
     "akinsho/bufferline.nvim",
     "nvim-lualine/lualine.nvim",
     "folke/which-key.nvim",
@@ -30,8 +26,6 @@ return {
     "dense-analysis/ale",
     --Undo tree
     "mbbill/undotree",
-    -- Run code
-    "erietz/vim-terminator",
 
     -- Colorschemes
     "lunarvim/darkplus.nvim",
@@ -51,9 +45,9 @@ return {
     "hrsh7th/cmp-nvim-lsp",
 
     -- Snippets
-    "L3MON4D3/LuaSnip", --snippet engine <== this is required for "hrsh7th/nvim-cmp" to work!
-    "rafamadriz/friendly-snippets", -- a bunch of snippets to use
-    "saadparwaiz1/cmp_luasnip", -- snippet completions
+    {"L3MON4D3/LuaSnip", event = {"InsertEnter"}}, --snippet engine <== this is required for "hrsh7th/nvim-cmp" to work!
+    {"rafamadriz/friendly-snippets", event = {"InsertEnter"}}, -- a bunch of snippets to use
+    {"saadparwaiz1/cmp_luasnip", event = {"InsertEnter"}}, -- snippet completions
 
     -- LSP
     "williamboman/mason.nvim",
@@ -69,7 +63,6 @@ return {
         "nvim-treesitter/nvim-treesitter",
         build = ":TSUpdate",
     },
-    "nvim-treesitter/playground",
     "nvim-treesitter/nvim-treesitter-context",
 
     -- Git
@@ -99,15 +92,8 @@ return {
     -- Indentation guides to all lines
     "lukas-reineke/indent-blankline.nvim",
 
-    -- Org Mode
-    "nvim-orgmode/orgmode",
-    "akinsho/org-bullets.nvim",
-
     -- General-purpose motion plugin
     "ggandor/leap.nvim",
-
-    -- Todo comments
-    "folke/todo-comments.nvim",
 
     -- Make quickfix window better
     "kevinhwang91/nvim-bqf",
@@ -118,9 +104,6 @@ return {
 
     -- Neovim wrapper for GDB, LLDB, PDB/PDB++ and BashDB
     "sakhnik/nvim-gdb",
-
-    -- Displaying the colours in the file
-    {"rrethy/vim-hexokinase", build = "make"},
 
     -- Generate annotation for function, class or other relevant type
     {
