@@ -32,7 +32,7 @@ return {
     "joshdick/onedark.vim",
     "morhetz/gruvbox",
     "LunarVim/Colorschemes",
-    -- "catppuccin/nvim",
+    "catppuccin/nvim",
     "EdenEast/nightfox.nvim",
     "rose-pine/neovim",
     "rebelot/kanagawa.nvim",
