@@ -101,12 +101,6 @@ return {
     -- Neovim wrapper for GDB, LLDB, PDB/PDB++ and BashDB
     "sakhnik/nvim-gdb",
 
-    -- Generate annotation for function, class or other relevant type
-    {
-        "danymat/neogen",
-        dependencies = "nvim-treesitter/nvim-treesitter",
-    },
-
     -- Macro management and execution
     {
         "ecthelionvi/NeoComposer.nvim",
