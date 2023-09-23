@@ -39,17 +39,6 @@ return {
     "Mofiqul/dracula.nvim",
     "folke/tokyonight.nvim",
 
-    -- Completion plugin
-    {"hrsh7th/nvim-cmp",
-        lazy = true,
-        dependencies = {
-            "hrsh7th/cmp-buffer",
-            "hrsh7th/cmp-path",
-            "hrsh7th/cmp-nvim-lsp",
-            "saadparwaiz1/cmp_luasnip"
-        },
-    },
-
     -- Snippets
     {"L3MON4D3/LuaSnip", --snippet engine <== this is required for "hrsh7th/nvim-cmp" to work!
         lazy = true,
