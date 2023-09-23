@@ -5,8 +5,6 @@ return {
     -- Useful lua functions used by lots of plugins
     "nvim-lua/plenary.nvim",
 
-    -- Auto pairs
-    "windwp/nvim-autopairs",
     -- Surroundings of a textobject
     "machakann/vim-sandwich",
     -- Commenter
