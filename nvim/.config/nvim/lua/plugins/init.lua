@@ -66,9 +66,6 @@ return {
     -- Simplified clipboard functionality
     "svermeulen/vim-easyclip",
 
-    -- Registers
-    "tversteeg/registers.nvim",
-
     -- Debugging
     "mfussenegger/nvim-dap",
     -- default debug configurations for Python (requires debugpy)
@@ -92,12 +89,6 @@ return {
 
     -- Neovim wrapper for GDB, LLDB, PDB/PDB++ and BashDB
     "sakhnik/nvim-gdb",
-
-    -- Macro management and execution
-    {
-        "ecthelionvi/NeoComposer.nvim",
-        dependencies = { "kkharji/sqlite.lua" }
-    },
 
     -- Markdown preview
     {
