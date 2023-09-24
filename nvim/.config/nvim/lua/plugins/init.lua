@@ -54,16 +54,8 @@ return {
     -- Linting
     "jose-elias-alvarez/null-ls.nvim",
 
-    -- Treesitter
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-    },
-    "nvim-treesitter/nvim-treesitter-context",
-
     -- Git
     "lewis6991/gitsigns.nvim",
-    "kdheepak/lazygit.nvim",
 
     -- Place, toggle and display marks
     "kshenoy/vim-signature",
