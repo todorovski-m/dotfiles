@@ -32,7 +32,8 @@ local function footer()
   for _, _ in pairs(plugins) do
       plugins_count = plugins_count + 1
   end
-  return string.format("v%d.%d.%d    %s    %d plugins", v.major, v.minor, v.patch, datetime, plugins_count)
+  local stats = require("lazy").stats()
+  return string.format("v%d.%d.%d    %s    %d/%d plugins (%.1f ms)", v.major, v.minor, v.patch, datetime, stats.loaded, plugins_count, stats.startuptime)
 end
 
 
@@ -43,5 +44,11 @@ dashboard.section.header.opts.hl = "Include"
 dashboard.section.buttons.opts.hl = "Keyword"
 
 dashboard.opts.opts.noautocmd = true
--- vim.cmd([[autocmd User AlphaReady echo 'ready']])
 alpha.setup(dashboard.opts)
+
+vim.api.nvim_create_autocmd("User", {
+    callback = function()
+        dashboard.section.footer.val = footer()
+        pcall(vim.cmd.AlphaRedraw)
+    end,
+})
