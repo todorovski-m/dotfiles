@@ -12,3 +12,4 @@
 ~/Videos
 ~/Dropbox/Mirko/research/makstil
 ~/Dropbox/Mirko/research/evn-zabugi-2023
+~/win-data/knigi
