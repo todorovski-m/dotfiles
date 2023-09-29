@@ -14,5 +14,5 @@ return {
     -- Run code
     "erietz/vim-terminator",
     init = init_terminator(),
-    ft = {"fortran", "python", "matlab"},
+    ft = {"fortran", "python", "matlab", "gnuplot"},
 }
