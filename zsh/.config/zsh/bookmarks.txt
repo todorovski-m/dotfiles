@@ -11,5 +11,5 @@
 ~/Pictures
 ~/Videos
 ~/Dropbox/Mirko/research/makstil
-~/Dropbox/Mirko/research/evn-zabugi-2023
+~/Dropbox/Mirko/research/evn-zabugi-2023/sn-izvodi
 ~/win-data/knigi
