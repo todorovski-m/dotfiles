@@ -216,6 +216,7 @@ exec_always setxkbmap -layout "us,mk,ru" -variant ",,mkd" -option grp:alt_shift_
 bindsym $mod+Ctrl+m exec xkb-switch -s "mk"
 bindsym $mod+Ctrl+e exec xkb-switch -s "us"
 bindsym $mod+Ctrl+r exec xkb-switch -s "ru(mkd)"
+bindsym $mod+Shift+l exec $HOME/.config/scripts/set_keyboard.sh
 
 # https://faq.i3wm.org/question/239/how-do-i-suspendlockscreen-and-logout/
 # Shutdown menu
