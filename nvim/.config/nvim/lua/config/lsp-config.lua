@@ -39,5 +39,10 @@ require("lspconfig").lua_ls.setup {
 }
 
 require("lspconfig").pyright.setup {
+    settings = {
+        python = {
+            analysis = { diagnosticMode = "off", typeCheckingMode = "off" },
+        },
+    },
     on_attach = on_attach
 }
