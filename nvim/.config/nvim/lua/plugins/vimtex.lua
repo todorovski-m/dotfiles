@@ -1,14 +1,5 @@
 local function init_vimtex()
-    -- The documentation says that xdotool is required for forward search (synctex).
-    -- sudo apt install xdotool
-    vim.g["vimtex_view_method"] = "zathura"
-
-    -- For inverse search in neovim
-    -- python3 -m pip install --user pynvim neovim-remote
-    -- add this to zathurarc
-    -- set synctex-editor-command "nvr --remote-silent %f -c %l"
-    -- IMPORTANT: when using pywal in Zathura-Pywal/zathura add $HOME/.local/bin to PATH
-    vim.g["vimtex_compiler_progname"] = "nvr"
+    vim.g["vimtex_view_method"] = "sioyek"
 
     -- Disable spell checking in comments in LaTeX files
     --vim.g["tex_comment_nospell"] = 1
@@ -120,6 +111,5 @@ end
 
 return {
     "lervag/vimtex",
-    ft = {"tex"},
     init = init_vimtex,
 }
