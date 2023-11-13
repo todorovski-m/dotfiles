@@ -89,9 +89,9 @@ keymap("i", "<C-s>", "<Esc>:update<CR>i", opts)
 keymap("v", "<C-s>", "<Esc>:update<CR>v", opts)
 
 -- Wrap visual selection
-keymap("n", "<M-q>", "gq", opts)
-keymap("i", "<M-q>", "gq", opts)
-keymap("v", "<M-q>", "gq", opts)
+keymap("n", "<M-q>", "gw", opts)
+keymap("i", "<M-q>", "gw", opts)
+keymap("v", "<M-q>", "gw", opts)
 
 -- Duplicate the current line
 keymap("n", "<M-d>", ":.t.<CR>", opts)
