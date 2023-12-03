@@ -1,5 +1,5 @@
 local function init_vimtex()
-    vim.g["vimtex_view_method"] = "sioyek"
+    vim.g["vimtex_view_method"] = "zathura"
 
     -- Disable spell checking in comments in LaTeX files
     --vim.g["tex_comment_nospell"] = 1
