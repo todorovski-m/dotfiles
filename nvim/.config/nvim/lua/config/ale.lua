@@ -1,13 +1,11 @@
 -- Add /usr/local/MATLAB/R2016b/bin/glnxa64 to PATH in .zshrc to mling to work
 vim.g["ale_linters"] = {
-    python = {"~/anaconda3/bin/pylint"},
     tex = {"chktex"},
     matlab = {"mlint"}
 }
 
 vim.g["ale_fixers"] = {
     ["*"] = {"remove_trailing_lines", "trim_whitespace"},
-    python = {"autopep8"}
 }
 
 vim.g["ale_virtualtext_cursor"] = 0
