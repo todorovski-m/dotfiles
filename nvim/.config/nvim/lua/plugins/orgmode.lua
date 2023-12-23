@@ -19,8 +19,8 @@ return {
 
     -- Setup orgmode
     require('orgmode').setup({
-        org_agenda_files = {'~/Dropbox/Mirko/org/*'},
-        org_default_notes_file = '~/Dropbox/Mirko/org/refile.org',
+        org_agenda_files = {vim.fn.expand('$HOME/Dropbox/Mirko/org/*')},
+        org_default_notes_file = vim.fn.expand('$HOME/Dropbox/Mirko/org/refile.org'),
         org_tags_column = -80,
         org_todo_keywords = {'TODO(t)', 'WAITING(w)', '|', 'DONE(d)', 'DELEGATED(g)', 'CANCELLED(c)'},
         org_todo_keyword_faces = {

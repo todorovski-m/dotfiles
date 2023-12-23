@@ -21,7 +21,7 @@ local options = {
     swapfile = false,                        -- creates a swapfile
     timeoutlen = 500,                        -- time to wait for a mapped sequence to complete (in milliseconds)
     undofile = true,                         -- enable persistent undo
-    undodir = "/home/mirko/.local/share/nvim/undo",  -- directory for undo history
+    undodir = vim.fn.expand("$HOME/.local/share/nvim/undo"),  -- directory for undo history
     updatetime = 300,                        -- faster completion (4000ms default)
     writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
     expandtab = true,                        -- convert tabs to spaces
@@ -54,7 +54,7 @@ for k, v in pairs(options) do
     vim.opt[k] = v
 end
 
-vim.g["python3_host_prog"] = "/home/mirko/anaconda3/bin/python3"
+vim.g["python3_host_prog"] = vim.fn.expand("$HOME/anaconda3/bin/python3")
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]

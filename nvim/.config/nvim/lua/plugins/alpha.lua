@@ -7,18 +7,19 @@ return {
             [[│││├┤ │ │└┐┌┘││││]],
             [[┘└┘└─┘└─┘ └┘ ┴┴ ┴]],
         }
+        local bookmarks = vim.fn.expand("$HOME/.config/zsh/bookmarks.txt")
         dashboard.section.buttons.val = {
             dashboard.button("a", "  Agenda", ":lua require('orgmode').action('agenda.prompt')<CR>"),
-            dashboard.button("h", "  Bookmarked directories", ":call fzf#run({'down': 10, 'source': 'cat ~/.config/zsh/bookmarks.txt', 'sink': 'cd' })<CR>"),
+            dashboard.button("h", "  Bookmarked directories", ":call fzf#run({'down': 10, 'source': 'cat " .. bookmarks .. "', 'sink': 'cd' })<CR>"),
             dashboard.button("g", "  Find directory", ":call fzf#run({'down': 10, 'source': 'find . -type d', 'sink': 'cd' })<CR>"),
             dashboard.button("f", "󰥩  Find file", ":Telescope find_files <CR>"),
             dashboard.button("n", "  New file", ":enew <CR>"),
             dashboard.button("l", "  Load session", ":SessionManager load_session<CR>"),
             dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
             dashboard.button("t", "  Find text", ":Telescope live_grep <CR>"),
-            dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),
-            dashboard.button("o", "  Org mode files", ":e ~/Dropbox/Mirko/org <CR>"),
-            dashboard.button(".", "  Dotfiles", ":e ~/Dropbox/Mirko/dotfiles <CR>"),
+            dashboard.button("c", "  Configuration", vim.fn.expand(":e $HOME/.config/nvim/init.lua <CR>")),
+            dashboard.button("o", "  Org mode files", vim.fn.expand(":e $HOME/Dropbox/Mirko/org <CR>")),
+            dashboard.button(".", "  Dotfiles", vim.fn.expand(":e $HOME/Dropbox/Mirko/dotfiles <CR>")),
             dashboard.button("q", "󰿅  Quit Neovim", ":qa<CR>"),
         }
         dashboard.section.footer.opts.hl = "Type"

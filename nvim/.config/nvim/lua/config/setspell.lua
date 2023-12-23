@@ -1,5 +1,5 @@
 vim.opt["spelllang"] = "mk,en"
-vim.opt["spellfile"] = "/home/mirko/.config/nvim/spell/mk.utf-8.add,/home/mirko/.config/nvim/spell/en.utf-8.add"
+vim.opt["spellfile"] = vim.fn.expand("$HOME/.config/nvim/spell/mk.utf-8.add,$HOME/.config/nvim/spell/en.utf-8.add")
 
 -- highlight SpellBad gui=underline guifg=#E06C75
 vim.cmd [[
