@@ -1,5 +1,9 @@
 local function init_vimtex()
-    vim.g["vimtex_view_method"] = "zathura"
+    if (vim.fn.has("macunix") == 1) then
+        vim.g["vimtex_view_method"] = "sioyek"
+    else
+        vim.g["vimtex_view_method"] = "zathura"
+    end
 
     -- Disable spell checking in comments in LaTeX files
     --vim.g["tex_comment_nospell"] = 1
