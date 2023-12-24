@@ -100,10 +100,8 @@ function o () {
 # https://github.com/ContinuumIO/anaconda-issues/issues/10173
 # https://github.com/ContinuumIO/anaconda-issues/issues/10781
 #
-# uncomment above this: export PATH="/home/mirko/anaconda3/bin:$PATH"  # commented out by conda initialize
+# add this in zsh/exports: export PATH="/home/mirko/anaconda3/bin:$PATH"  # commented out by conda initialize
 #
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
 #__conda_setup="$('/home/mirko/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 #if [ $? -eq 0 ]; then
 if [ 1 -eq 0 ]; then
@@ -116,6 +114,20 @@ else
     fi
 fi
 #unset __conda_setup
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/mirko/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/mirko/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/mirko/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/mirko/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
 # <<< conda initialize <<<
 
 # https://unix.stackexchange.com/questions/32508/how-can-i-open-a-new-terminal-in-the-same-directory-of-the-last-used-one-from-a
