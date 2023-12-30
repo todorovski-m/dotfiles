@@ -4,7 +4,7 @@ if [ $(hostname) = "dell3060" ]
 then
     xrandr --output HDMI-1 --primary --mode 2560x1440 --pos 0x0
     #xrandr --output HDMI-1 --primary --mode 3840x2160 --pos 0x0
-    xgamma -gamma 0.9
+    xgamma -gamma 1.00
 fi
 
 if [ $(hostname) = "dell-3567" ]
