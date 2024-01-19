@@ -62,7 +62,11 @@ goto_bookmarks() {
 }
 
 open_file_manager() {
-    nohup xdg-open . > /dev/null 2>&1 & disown
+    if [[ $(uname) == "Darwin" ]]; then
+        open .
+    else
+        nohup xdg-open . > /dev/null 2>&1 & disown
+    fi
 }
 
 pc() {
