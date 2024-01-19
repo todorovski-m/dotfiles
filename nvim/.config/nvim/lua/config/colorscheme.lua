@@ -12,7 +12,7 @@ require("tokyonight").setup({
             fg = c.dark5,
         }
     end,
-    style = "night", -- The theme comes in three styles, `storm`, a darker variant `night` and `day`
+    style = "moon", -- Styles: night, storm, day, moon
     transparent = false, -- Enable this to disable setting the background color
     terminal_colors = true, -- Configure the colors used when opening a `:terminal` in Neovim
     styles = {
