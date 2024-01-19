@@ -83,6 +83,7 @@ local mappings = {
   ["M"] = { "<cmd>Mason<cr>", "LSP manager (mason)" },
   ["z"] = { "<cmd>lua ExportColorsZathura()<cr>", "Export colors to zathura" },
   ["k"] = { "<cmd>lua ExportColorsKitty()<cr>", "Export colors to kitty" },
+  ["y"] = { "<cmd>lua ExportColorsSioyek()<cr>", "Export colors to Sioyek" },
   ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
