@@ -1,7 +1,7 @@
-set default-fg "#c0caf5"
-set recolor-darkcolor "#c0caf5"
-set default-bg "#1a1b26"
-set recolor-lightcolor "#1a1b26"
+set default-fg "#c8d3f5"
+set recolor-darkcolor "#c8d3f5"
+set default-bg "#222436"
+set recolor-lightcolor "#222436"
 
 set highlight-color "#575268"
 set highlight-fg "#f5bde6"
