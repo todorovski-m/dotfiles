@@ -58,8 +58,6 @@ keymap("n", "'", ":noh<CR>:<backspace>", opts)
 -- Undo tree
 keymap("n", "<C-Y>", ":UndotreeToggle<CR>", opts)
 
-
-
 -- Repeat a command-line command
 keymap("n", "<C-P>", "@:m<CR>", opts)
 
@@ -76,7 +74,7 @@ keymap("v", ">", ">gv", opts)
 
 -- Toggle comment with NERDCommenter
 vim.g["NERDCustomDelimiters"] = {
-    python = {left = "#"}
+	python = { left = "#" },
 }
 vim.g["NERDSpaceDelims"] = 1 -- add spaces after comment delimiters
 vim.cmd("map <C-/> <leader>c<space>")
@@ -84,9 +82,15 @@ vim.cmd("map <C-/> <leader>c<space>")
 vim.cmd("map <C-_> <leader>c<space>")
 
 -- Save file
-keymap("n", "<C-s>", ":update<CR>", opts)
-keymap("i", "<C-s>", "<Esc>:update<CR>i", opts)
-keymap("v", "<C-s>", "<Esc>:update<CR>v", opts)
+if jit.os == "OSX" then
+	keymap("n", "<D-s>", ":update<CR>", opts)
+	keymap("i", "<D-s>", "<Esc>:update<CR>i", opts)
+	keymap("v", "<D-s>", "<Esc>:update<CR>v", opts)
+else
+	keymap("n", "<C-s>", ":update<CR>", opts)
+	keymap("i", "<C-s>", "<Esc>:update<CR>i", opts)
+	keymap("v", "<C-s>", "<Esc>:update<CR>v", opts)
+end
 
 -- Wrap visual selection
 keymap("n", "<M-q>", "gw", opts)
@@ -94,7 +98,11 @@ keymap("i", "<M-q>", "gw", opts)
 keymap("v", "<M-q>", "gw", opts)
 
 -- Duplicate the current line
-keymap("n", "<M-d>", ":.t.<CR>", opts)
+if jit.os == "OSX" then
+	keymap("n", "<D-d>", ":.t.<CR>", opts)
+else
+	keymap("n", "<M-d>", ":.t.<CR>", opts)
+end
 
 -- Start interactive EasyAlign in visual mode (e.g. vipga)
 keymap("x", "ga", "<Plug>(EasyAlign)", opts)
@@ -108,10 +116,10 @@ keymap("n", "n", "nzz", opts)
 keymap("n", "N", "Nzz", opts)
 
 -- Replace integers with increment
-vim.cmd [[
+vim.cmd([[
 function! ReplaceIncrement()
     :let i=0 | '<,'>s/\d\+/\=i.execute('let i+=1')/g
     :noh
 endfunction
-]]
+]])
 keymap("v", "<C-i>", ":call ReplaceIncrement()<CR>", opts)

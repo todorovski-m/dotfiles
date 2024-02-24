@@ -23,8 +23,8 @@ augroup filetype_py
 augroup end
 
 augroup filetype_sh
-    autocmd FileType sh nnoremap <buffer> <silent> <F5> :! bash %<CR>
-    autocmd FileType sh inoremap <buffer> <silent> <F5> <Esc>:! bash %<CR>
+    autocmd FileType sh nnoremap <buffer> <silent> <F5> :update<CR> :! bash %<CR>
+    autocmd FileType sh inoremap <buffer> <silent> <F5> :update<CR> <Esc>:! bash %<CR>
 augroup end
 
 augroup filetype_tex
@@ -99,3 +99,9 @@ vim.cmd [[
 --   autocmd!
 --   autocmd BufWritePre * lua vim.lsp.buf.formatting()
 -- augroup end
+
+if (vim.fn.has("macunix") == 1) then
+    vim.cmd [[
+        autocmd FileType python exe 'silent! compiler pyunit'
+    ]]
+end
