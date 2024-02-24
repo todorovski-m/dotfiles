@@ -1,0 +1,37 @@
+{
+  "name": "friendly-snippets",
+  "engines": {
+    "vscode": "^1.11.0"
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "plaintex",
+          "tex"
+        ],
+        "path": "./my-latex-snippets.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/base.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/comprehension.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/debug.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/python.json"
+      },
+      {
+        "language": "python",
+        "path": "./python/unittest.json"
+      }
+    ]
+  }
+}

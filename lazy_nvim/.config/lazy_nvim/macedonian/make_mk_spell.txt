@@ -1,0 +1,7 @@
+Види овде :help mkspell
+
+Списокот на зборови е симнат од https://forum.it.mk/threads/makedonski-spellcheck-dictionary-vo-tekst-datoteka.52432/
+Правење на spl датотека од листа со зборови.
+да се распакува macedonian-dict.zip
+:mkspell mk macedonian-dict
+cp mk.utf-8.spl $HOME/.config/nvim/spell
