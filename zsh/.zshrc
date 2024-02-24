@@ -152,3 +152,7 @@ eval "$(starship init zsh)"
 precmd () {print -Pn "\e]0;%~\a"}
 
 # source /home/mirko/.config/broot/launcher/bash/br
+
+if [ -f ~/.private_env_vars ]; then
+    source ~/.private_env_vars
+fi
