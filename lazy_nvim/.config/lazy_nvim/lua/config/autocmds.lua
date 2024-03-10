@@ -30,6 +30,11 @@ augroup end
 augroup filetype_lua
     autocmd FileType lua nnoremap <buffer> <silent> <F5> :update<CR> :luafile %<CR>
 augroup end
+
+augroup filetype_gpl
+    autocmd FileType gnuplot nnoremap <buffer> <silent> <F5> :update<CR> :TerminatorRunFileInOutputBuffer<CR>
+    autocmd FileType gnuplot inoremap <buffer> <silent> <F5> <Esc>:update<CR> :TerminatorRunFileInOutputBuffer<CR>
+augroup end
 ]])
 
 if vim.fn.has("macunix") == 1 then
