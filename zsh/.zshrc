@@ -143,7 +143,7 @@ function cd {
 # restore last saved path
 if [ -f ~/.last_dir ]; then
     last_dir=$(cat ~/.last_dir)
-    cd "$last_dir"
+    # cd "$last_dir"
 fi
 
 eval "$(starship init zsh)"
@@ -156,3 +156,12 @@ precmd () {print -Pn "\e]0;%~\a"}
 if [ -f ~/.private_env_vars ]; then
     source ~/.private_env_vars
 fi
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/Users/mirko/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
