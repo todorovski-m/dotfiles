@@ -21,5 +21,11 @@ return {
       inc_rename = false,
       lsp_doc_border = false,
     },
+    routes = {
+      {
+        view = "cmdline",
+        filter = { event = "msg_showmode" },
+      },
+    },
   },
 }
