@@ -103,10 +103,8 @@ keymap("n", "ss", "<Plug>SubstituteOverMotionMap")
 keymap("x", "ss", "<Plug>XEasyClipPaste")
 
 -- ChatGPT
-wk.register({
-  C = {
-    name = "ChatGPT",
-    c = { "<cmd>ChatGPT<CR>", "ChatGPT" },
-    e = { "<cmd>ChatGPTEditWithInstruction<CR>", "Edit with instruction", mode = { "n", "v" } },
-  },
-}, { prefix = "<leader>" })
+wk.add({
+  { "<leader>C", group = "ChatGPT" },
+  { "<leader>Cc", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
+  { "<leader>Ce", "<cmd>ChatGPTEditWithInstruction<CR>", desc = "Edit with instruction", mode = { "n", "v" } },
+})
