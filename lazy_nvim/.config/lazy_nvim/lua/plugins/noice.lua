@@ -16,16 +16,16 @@ return {
     },
     presets = {
       bottom_search = false,
-      command_palette = false,
-      long_message_to_split = true,
-      inc_rename = false,
-      lsp_doc_border = false,
     },
-    routes = {
-      {
-        view = "cmdline",
-        filter = { event = "msg_showmode" },
-      },
+    -- https://github.com/NormalNvim/NormalNvim/blob/c44fa82ae6c6eb3106419db5917e95a59ffec2d8/lua/plugins/2-ui.lua#L715
+    -- Disable every other noice feature
+    messages = { enabled = false },
+    lsp = {
+      hover = { enabled = false },
+      signature = { enabled = false },
+      progress = { enabled = false },
+      message = { enabled = false },
+      smart_move = { enabled = false },
     },
   },
 }
