@@ -1,6 +1,6 @@
 local function init_vimtex()
   if vim.fn.has("macunix") == 1 then
-    vim.g["vimtex_view_method"] = "sioyek"
+    vim.g["vimtex_view_method"] = "skim"
   else
     vim.g["vimtex_view_method"] = "zathura"
   end
