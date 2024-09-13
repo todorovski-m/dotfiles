@@ -44,7 +44,11 @@ alias onedrive-mount="rclone --vfs-cache-mode writes mount \"onedrive\":  ~/oned
 alias scigla="sftp mirko@192.168.1.101"
 alias kdenlive="/home/mirko/programs/kdenlive/kdenlive-21.04.0-x86_64.appimage"
 alias jp="jupyter qtconsole"
-alias ls="exa -al --color=always --group-directories-first --icons"
+if [[ $(uname) == "Darwin" ]]; then
+    alias ls="eza -al --color=always --group-directories-first --icons"
+else
+    alias ls="exa -al --color=always --group-directories-first --icons"
+fi
 alias manim="conda activate manim"
 alias studenti="python ~/Dropbox/Mirko/email_studenti.py"
 alias pdf22="~/Dropbox/Mirko/pdf_2x2.sh"
