@@ -1,4 +1,10 @@
--- Add /usr/local/MATLAB/R2016b/bin/glnxa64 to PATH in .zshrc to mling to work
+-- Add /usr/local/MATLAB/R2016b/bin/glnxa64 to PATH in .zshrc to mlint to work
+if vim.fn.has("macunix") == 1 then
+  vim.g["ale_fortran_gcc_executable"] = "/opt/homebrew/bin/gcc-14"
+else
+  vim.g["ale_fortran_gcc_executable"] = "gcc"
+end
+
 vim.g["ale_linters"] = {
     tex = {"chktex"},
     matlab = {"mlint"}
