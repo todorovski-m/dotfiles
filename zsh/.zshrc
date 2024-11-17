@@ -29,7 +29,9 @@ ZSHZ_CD=cd
 # source
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/exports.zsh
-source $HOME/.config/zsh/keys.zsh
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+    source $HOME/.config/zsh/keys.zsh
+fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -91,10 +93,12 @@ zle -N goto_bookmarks
 zle -N open_file_manager
 
 # bind widgets to keys
-bindkey "^O" open_with_fzf
-bindkey "^G" cd_with_fzf
-bindkey "^H" goto_bookmarks
-bindkey "^J" open_file_manager
+if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
+    bindkey "^O" open_with_fzf
+    bindkey "^G" cd_with_fzf
+    bindkey "^H" goto_bookmarks
+    bindkey "^J" open_file_manager
+fi
 
 function o () {
     nohup xdg-open "$@" > /dev/null 2>&1 & disown
