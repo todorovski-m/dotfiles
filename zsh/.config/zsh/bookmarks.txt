@@ -1,15 +1,12 @@
 ~/Dropbox/Mirko
 ~/Dropbox/Mirko/research
-~/Dropbox/Mirko/research/grcev/induktivnost/
-~/Dropbox/Mirko/research/current_components_2023
+~/Dropbox/Mirko/research/grcev
+~/Dropbox/Mirko/research/components_2024
 ~/Dropbox/Mirko/dotfiles
 ~/Dropbox
-~/Dropbox/razmena
 ~/Desktop
 ~/Documents
 ~/Downloads
 ~/Pictures
 ~/Videos
-~/Dropbox/Mirko/research/makstil
-~/Dropbox/Mirko/research/evn-zabugi-2023/sn-izvodi
 ~/win-data/knigi

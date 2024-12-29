@@ -1,0 +1,10 @@
+~/OneDrive/Mirko
+~/OneDrive/Mirko/research
+~/OneDrive/Mirko/research/grcev
+~/OneDrive/Mirko/research/components_2024
+~/OneDrive/Mirko/dotfiles
+~/OneDrive
+~/Desktop
+~/Documents
+~/Downloads
+~/Pictures

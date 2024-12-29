@@ -54,7 +54,11 @@ cd_with_fzf() {
 }
 
 goto_bookmarks() {
-    dir_name=$(cat ~/.config/zsh/bookmarks.txt | fzf)
+    if [[ $(uname) = "Darwin" ]]; then
+        dir_name=$(cat ~/.config/zsh/bookmarks-mac.txt | fzf)
+    else
+        dir_name=$(cat ~/.config/zsh/bookmarks.txt | fzf)
+    fi
     dir_name=${dir_name/\~/$HOME} # replace ~ with $HOME
     cd "$dir_name"
     #zle reset-prompt
@@ -169,3 +173,5 @@ path=('/Users/mirko/.juliaup/bin' $path)
 export PATH
 
 # <<< juliaup initialize <<<
+
+source /Users/mirko/.config/broot/launcher/bash/br
