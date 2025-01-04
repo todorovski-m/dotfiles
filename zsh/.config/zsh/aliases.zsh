@@ -3,10 +3,15 @@ alias v="nvim"
 alias f='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias cp="cp -iv"
 alias mv="mv -iv"
-alias s="~/Dropbox/Mirko/sync_script/my_sync.sh"
+if [[ $(uname) = "Darwin" ]]; then
+    alias s="~/OneDrive/Mirko/sync_script/my_sync.sh"
+else
+    alias s="~/Dropbox/Mirko/sync_script/my_sync.sh"
+fi
 alias td="code ~/Dropbox/Mirko/todo/mirko.todo"
 alias cigla="ssh mirko@mirkot.synology.me"
 alias cigla-sshfs="sshfs mirko@mirkot.synology.me:/ /home/mirko/cigla"
+alias zotero-sshfs="sshfs mirko@192.168.1.101:home/ZoteroFiles ~/ZoteroFiles"
 alias samo-monitor="arandr ~/.screenlayout/samo-nadvoresen.sh"
 alias gams-studio="~/programs/gams32.2_linux_x64_64_sfx/studio/studio.AppImage"
 alias lampp="sudo /opt/lampp/manager-linux-x64.run"
