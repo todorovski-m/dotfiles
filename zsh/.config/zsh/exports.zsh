@@ -13,6 +13,9 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/mirko/programs/gurobi902/linux64/l
 #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 export PATH="/home/mirko/.local/bin:$PATH"
 export PATH="/usr/local/MATLAB/R2016b/bin/glnxa64:$PATH"
+if [[ $(uname) == "Darwin" ]]; then
+  export PATH=$PATH:/Applications/MEGAcmd.app/Contents/MacOS:/opt/homebrew/bin
+fi
 
 stty -ixon
 
