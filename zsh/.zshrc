@@ -108,40 +108,6 @@ function o () {
     nohup xdg-open "$@" > /dev/null 2>&1 & disown
 }
 
-# very slow runtimes of terminal caused by Anaconda3 installer
-# https://github.com/ContinuumIO/anaconda-issues/issues/10173
-# https://github.com/ContinuumIO/anaconda-issues/issues/10781
-#
-# add this in zsh/exports: export PATH="/home/mirko/anaconda3/bin:$PATH"  # commented out by conda initialize
-#
-#__conda_setup="$('/home/mirko/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-if [ 1 -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mirko/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mirko/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/mirko/anaconda3/bin:$PATH"
-    fi
-fi
-#unset __conda_setup
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/mirko/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/mirko/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/mirko/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/mirko/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 # https://unix.stackexchange.com/questions/32508/how-can-i-open-a-new-terminal-in-the-same-directory-of-the-last-used-one-from-a
 # save path on cd
 function cd {
@@ -165,13 +131,11 @@ if [ -f ~/.private_env_vars ]; then
     source ~/.private_env_vars
 fi
 
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/mirko/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
-
 source /Users/mirko/.config/broot/launcher/bash/br
+
+# Initialize pyenv
+export PATH="$HOME/.pyenv/bin:$PATH"
+if which pyenv > /dev/null; then
+  eval "$(pyenv init --path)"
+  eval "$(pyenv init -)"
+fi
