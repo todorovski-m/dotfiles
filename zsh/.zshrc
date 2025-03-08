@@ -135,4 +135,5 @@ source /Users/mirko/.config/broot/launcher/bash/br
 
 # Initialize pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init - zsh)"
+# eval "$(pyenv init - zsh)"
+export PATH="$HOME/.pyenv/versions/3.10.16/bin:$PATH"
