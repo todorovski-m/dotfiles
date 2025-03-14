@@ -8,6 +8,7 @@ export PATH="/usr/local/lib/nodejs/node-v12.16.3/bin:$PATH"
 export PATH="/home/mirko/.local/bin:$PATH"
 if [[ $(uname) == "Darwin" ]]; then
   export PATH=$PATH:/Applications/MEGAcmd.app/Contents/MacOS:/opt/homebrew/bin
+  export PATH="/Volumes/MacApps/CPLEX_Studio_Community2211/cplex/bin/arm64_osx:$PATH"
 fi
 
 stty -ixon
