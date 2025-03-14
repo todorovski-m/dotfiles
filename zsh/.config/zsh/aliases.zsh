@@ -1,4 +1,3 @@
-alias lv="NVIM_APPNAME=lazy_nvim nvim"
 alias v="nvim"
 alias f='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias cp="cp -iv"
