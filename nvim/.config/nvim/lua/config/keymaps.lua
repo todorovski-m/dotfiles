@@ -1,125 +1,110 @@
-local opts = { noremap = true, silent = true }
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
 
--- Shorten function name
-local keymap = vim.api.nvim_set_keymap
+local wk = require("which-key")
 
---Remap space as leader key
--- keymap("", "<Space>", "<Nop>", opts)
--- vim.g.mapleader = " "
--- vim.g.maplocalleader = " "
-
--- Modes
---   normal_mode = "n",
---   insert_mode = "i",
---   visual_mode = "v",
---   visual_block_mode = "x",
---   term_mode = "t",
---   command_mode = "c",
-
--- Normal --
+local function keymap(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend("force", options, opts)
+  end
+  vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
 
 -- Number up and down
-keymap("n", "g=", "<C-a>", opts)
-keymap("n", "g-", "<C-x>", opts)
+keymap("n", "g=", "<C-a>", { desc = "Increment number" })
+keymap("n", "g-", "<C-x>", { desc = "Decrement number" })
 
--- Better window navigation
-keymap("n", "<C-Left>", ":wincmd h<CR>", opts)
-keymap("n", "<C-Right>", ":wincmd l<CR>", opts)
-keymap("n", "<C-Down>", ":wincmd j<CR>", opts)
-keymap("n", "<C-Up>", ":wincmd k<CR>", opts)
+-- Navigate windows with arrows
+keymap("n", "<C-Left>", ":wincmd h<CR>")
+keymap("n", "<C-Right>", ":wincmd l<CR>")
+keymap("n", "<C-Down>", ":wincmd j<CR>")
+keymap("n", "<C-Up>", ":wincmd k<CR>")
 
--- Resize with arrows
-keymap("n", "<S-Up>", ":resize -2<CR>", opts)
-keymap("n", "<S-Down>", ":resize +2<CR>", opts)
-keymap("n", "<S-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<S-Right>", ":vertical resize +2<CR>", opts)
+-- Resize windows with arrows
+keymap("n", "<S-Up>", ":resize -2<CR>")
+keymap("n", "<S-Down>", ":resize +2<CR>")
+keymap("n", "<S-Left>", ":vertical resize -2<CR>")
+keymap("n", "<S-Right>", ":vertical resize +2<CR>")
 
 -- Navigate buffers
-keymap("n", "<S-Tab>", ":bprevious<CR>", opts)
-keymap("n", "<Tab>", ":bnext<CR>", opts)
+keymap("n", "<S-Tab>", ":bprevious<CR>")
+keymap("n", "<Tab>", ":bnext<CR>")
 
--- Close windows and tabs
-keymap("n", "<C-q>", ":wincmd q<CR>", opts)
-keymap("n", "<F4>", ":bdelete<CR>", opts)
+-- Delete bufffer
+keymap("n", "<F4>", ":bdelete<CR>")
 
 -- Leave only current window
-keymap("n", "<C-F4>", ":only<CR>", opts)
+keymap("n", "<C-F4>", ":only<CR>")
 
 -- Move text up and down
 -- https://vim.fandom.com/wiki/Moving_lines_up_or_down
-keymap("n", "<M-Down>", ":m .+1<CR>==", opts)
-keymap("n", "<M-Up>", ":m .-2<CR>==", opts)
-keymap("v", "<M-Down>", ":m '>+1<CR>gv=gv", opts)
-keymap("v", "<M-Up>", ":m '<-2<CR>gv=gv", opts)
+keymap("n", "<M-Down>", ":m .+1<CR>==")
+keymap("n", "<M-Up>", ":m .-2<CR>==")
+keymap("v", "<M-Down>", ":m '>+1<CR>gv=gv")
+keymap("v", "<M-Up>", ":m '<-2<CR>gv=gv")
 
 -- Remove highlight of search pattern
-keymap("n", "'", ":noh<CR>:<backspace>", opts)
-
--- Undo tree
-keymap("n", "<C-Y>", ":UndotreeToggle<CR>", opts)
+keymap("n", "'", ":noh<CR>:<backspace>")
 
 -- Repeat a command-line command
-keymap("n", "<C-P>", "@:m<CR>", opts)
+keymap("n", "<C-P>", "@:m<CR>")
 
 -- Telescope keymaps
---keymap("n", "<C-o>", ":Telescope find_files<CR>", opts)
-keymap("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
-keymap("n", "<C-b>", ":Telescope buffers<CR>", opts)
-keymap("n", "<C-g>", ":Telescope grep_string<CR>", opts)
+keymap("n", "<C-o>", ":Telescope find_files<CR>")
+keymap("n", "<C-f>", ":Telescope current_buffer_fuzzy_find<CR>")
+keymap("n", "<C-b>", ":Telescope buffers<CR>")
+keymap("n", "<C-g>", ":Telescope grep_string<CR>")
 
--- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
+keymap("v", "<", "<gv")
+keymap("v", ">", ">gv")
 
--- Toggle comment with NERDCommenter
-vim.g["NERDCustomDelimiters"] = {
-	python = { left = "#" },
-}
-vim.g["NERDSpaceDelims"] = 1 -- add spaces after comment delimiters
-vim.cmd("map <C-/> <leader>c<space>")
--- for some reason, vim registers <C-/> as <C-_> (this is in tmux also)
-vim.cmd("map <C-_> <leader>c<space>")
+-- Toggle comment
+vim.cmd("map <C-/> gcc")
 
 -- Save file
 if jit.os == "OSX" then
-	keymap("n", "<D-s>", ":update<CR>", opts)
-	keymap("i", "<D-s>", "<Esc>:update<CR>i", opts)
-	keymap("v", "<D-s>", "<Esc>:update<CR>v", opts)
+  keymap("n", "<D-s>", ":update<CR>")
+  keymap("i", "<D-s>", "<Esc>:update<CR>i")
+  keymap("v", "<D-s>", "<Esc>:update<CR>v")
 else
-	keymap("n", "<C-s>", ":update<CR>", opts)
-	keymap("i", "<C-s>", "<Esc>:update<CR>i", opts)
-	keymap("v", "<C-s>", "<Esc>:update<CR>v", opts)
+  keymap("n", "<M-s>", ":update<CR>")
+  keymap("i", "<M-s>", "<Esc>:update<CR>i")
+  keymap("v", "<M-s>", "<Esc>:update<CR>v")
 end
-
--- Wrap visual selection
-keymap("n", "<M-q>", "gw", opts)
-keymap("i", "<M-q>", "gw", opts)
-keymap("v", "<M-q>", "gw", opts)
 
 -- Duplicate the current line
 if jit.os == "OSX" then
-	keymap("n", "<D-d>", ":.t.<CR>", opts)
+  keymap("n", "<D-d>", ":.t.<CR>")
 else
-	keymap("n", "<M-d>", ":.t.<CR>", opts)
+  keymap("n", "<M-d>", ":.t.<CR>")
 end
 
--- Start interactive EasyAlign in visual mode (e.g. vipga)
-keymap("x", "ga", "<Plug>(EasyAlign)", opts)
--- Start interactive EasyAlign for a motion/text object (e.g. gaip)
-keymap("n", "ga", "<Plug>(EasyAlign)", opts)
+-- Start EasyAlign
+keymap("x", "ga", "<Plug>(EasyAlign)", { desc = "Easy Align" })
 
 -- Better vertical movements (center the view after certain movement)
-keymap("n", "<C-d>", "<C-d>zz", opts)
-keymap("n", "<C-u>", "<C-u>zz", opts)
-keymap("n", "n", "nzz", opts)
-keymap("n", "N", "Nzz", opts)
+keymap("n", "<C-d>", "<C-d>zz")
+keymap("n", "<C-u>", "<C-u>zz")
+keymap("n", "n", "nzz")
+keymap("n", "N", "Nzz")
 
--- Replace integers with increment
-vim.cmd([[
-function! ReplaceIncrement()
-    :let i=0 | '<,'>s/\d\+/\=i.execute('let i+=1')/g
-    :noh
-endfunction
-]])
-keymap("v", "<C-i>", ":call ReplaceIncrement()<CR>", opts)
+-- Spell suggestions
+keymap("n", "<F7>", ":Telescope spell_suggest<CR>")
+
+-- Easy Clip
+vim.g["EasyClipUseCutDefaults"] = 0
+-- before: map g- to c-x so the latter will be free for cut
+keymap("n", "<C-x>", "<Plug>MoveMotionPlug")
+keymap("x", "<C-x>", "<Plug>MoveMotionXPlug")
+keymap("n", "ss", "<Plug>SubstituteOverMotionMap")
+keymap("x", "ss", "<Plug>XEasyClipPaste")
+
+-- ChatGPT
+wk.add({
+  { "<leader>C", group = "ChatGPT" },
+  { "<leader>Cc", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
+  { "<leader>Ce", "<cmd>ChatGPTEditWithInstruction<CR>", desc = "Edit with instruction", mode = { "n", "v" } },
+})

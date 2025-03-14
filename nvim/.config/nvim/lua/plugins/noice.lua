@@ -1,34 +1,31 @@
 return {
-    "folke/noice.nvim",
-    event = "VeryLazy",
-    enabled = false,
-    opts = {
-        lsp = {
-            override = {
-                ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-                ["vim.lsp.util.stylize_markdown"] = true,
-                ["cmp.entry.get_documentation"] = true,
-            },
+  "folke/noice.nvim",
+  event = "VeryLazy",
+  opts = {
+    views = {
+      cmdline_popup = {
+        position = {
+          row = "50%",
+          col = "50%",
         },
-        presets = {
-            bottom_search = false,
-            lsp_doc_border = false,
+        size = {
+          width = 60,
+          height = "auto",
         },
-        messages = {
-            enabled = true,
-        },
-        routes = {
-            {
-                filter = {
-                    event = "msg_show",
-                    kind = "",
-                },
-                opts = { skip = true },
-            },
-        }
+      },
     },
-    dependencies = {
-        "MunifTanjim/nui.nvim",
-        "rcarriga/nvim-notify",
+    presets = {
+      bottom_search = false,
     },
+    -- https://github.com/NormalNvim/NormalNvim/blob/c44fa82ae6c6eb3106419db5917e95a59ffec2d8/lua/plugins/2-ui.lua#L715
+    -- Disable every other noice feature
+    messages = { enabled = false },
+    lsp = {
+      hover = { enabled = false },
+      signature = { enabled = false },
+      progress = { enabled = false },
+      message = { enabled = false },
+      smart_move = { enabled = false },
+    },
+  },
 }
