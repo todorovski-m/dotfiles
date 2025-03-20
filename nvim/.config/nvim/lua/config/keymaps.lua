@@ -108,3 +108,6 @@ wk.add({
   { "<leader>Cc", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
   { "<leader>Ce", "<cmd>ChatGPTEditWithInstruction<CR>", desc = "Edit with instruction", mode = { "n", "v" } },
 })
+
+-- Run files
+keymap("n", "<F5>", ":AsyncTask file-run<CR>")
