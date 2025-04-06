@@ -5,6 +5,7 @@
 vim.opt.autochdir = true
 vim.opt.conceallevel = 0
 vim.opt.shiftwidth = 4 -- the number of spaces inserted for each indentation
+vim.opt.listchars = { tab = "» " }
 
 vim.opt["spelllang"] = "mk,en"
 vim.opt["spellfile"] = vim.fn.expand("$HOME/.config/nvim/spell/mk.utf-8.add,$HOME/.config/nvim/spell/en.utf-8.add")
