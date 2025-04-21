@@ -46,7 +46,7 @@ alias vpn-start="openvpn3 session-start --config /home/mirko/Dropbox/Mirko/Mirko
 alias vpn-list="openvpn3 sessions-list"
 alias vpn-stop="openvpn3 session-manage --config /home/mirko/Dropbox/Mirko/Mirko_Todorovski.ovpn --disconnect"
 alias onedrive-mount="rclone --vfs-cache-mode writes mount \"onedrive\":  ~/onedrive "
-alias scigla="sftp mirko@192.168.1.101"
+alias scigla="sftp mirko@100.118.233.99"
 alias kdenlive="/home/mirko/programs/kdenlive/kdenlive-21.04.0-x86_64.appimage"
 alias jp="jupyter qtconsole"
 if [[ $(uname) == "Darwin" ]]; then
