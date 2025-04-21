@@ -20,11 +20,8 @@ plug "zsh-users/zsh-autosuggestions"
 plug "hlissner/zsh-autopair"
 plug "zap-zsh/supercharge"
 plug "zsh-users/zsh-syntax-highlighting"
-plug "agkozak/zsh-z"
-autoload -U compinit; compinit # for tab completion to work in zsh-z
-# specify directory-changing command (default: builtin cd)
-# my function named cd which saves path on cd
-ZSHZ_CD=cd
+
+compinit
 
 # source
 source $HOME/.config/zsh/aliases.zsh
@@ -137,3 +134,14 @@ source /Users/mirko/.config/broot/launcher/bash/br
 export PATH="$HOME/.pyenv/bin:$PATH"
 # eval "$(pyenv init - zsh)"
 export PATH="$HOME/.pyenv/versions/3.10.16/bin:$PATH"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+eval "$(zoxide init zsh)"
