@@ -94,14 +94,6 @@ keymap("n", "N", "Nzz")
 -- Spell suggestions
 keymap("n", "<F7>", ":Telescope spell_suggest<CR>")
 
--- Easy Clip
-vim.g["EasyClipUseCutDefaults"] = 0
--- before: map g- to c-x so the latter will be free for cut
-keymap("n", "<C-x>", "<Plug>MoveMotionPlug")
-keymap("x", "<C-x>", "<Plug>MoveMotionXPlug")
-keymap("n", "ss", "<Plug>SubstituteOverMotionMap")
-keymap("x", "ss", "<Plug>XEasyClipPaste")
-
 -- ChatGPT
 wk.add({
   { "<leader>C", group = "ChatGPT" },
