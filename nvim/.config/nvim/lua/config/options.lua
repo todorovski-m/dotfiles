@@ -20,3 +20,7 @@ highlight SpellCap gui=underline guisp=#E06C75
 vim.opt.keymap = "macedonian" -- switch the layout with Ctrl-^ (insert mode) copy macedonian.vim to $VIMRUNTIME/keymap/
 vim.opt.iminsert = 0 -- keymap is not effective
 vim.opt.imsearch = -1 -- the value of 'iminsert' is used
+
+-- Display the current file in the window title
+vim.o.title = true
+vim.o.titlestring = "%F"

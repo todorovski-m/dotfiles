@@ -119,9 +119,6 @@ fi
 
 eval "$(starship init zsh)"
 
-# set window title automatically to the current directory
-precmd () {print -Pn "\e]0;%~\a"}
-
 # source /home/mirko/.config/broot/launcher/bash/br
 
 if [ -f ~/.private_env_vars ]; then
