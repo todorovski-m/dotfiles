@@ -103,3 +103,16 @@ wk.add({
 
 -- Run files
 keymap("n", "<F5>", ":AsyncTask file-run<CR>")
+
+-- global marks
+-- local function keymap(mode, lhs, rhs, opts)
+local prefixes = "m'"
+local letters = "abcdefghijklmnopqrstuvwxyz"
+for i = 1, #prefixes do
+  local prefix = prefixes:sub(i, i)
+  for j = 1, #letters do
+    local lower_letter = letters:sub(j, j)
+    local upper_letter = string.upper(lower_letter)
+    keymap("n", prefix .. lower_letter, prefix .. upper_letter, { desc = "Mark " .. upper_letter })
+  end
+end
