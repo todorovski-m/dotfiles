@@ -72,8 +72,6 @@ if [ -f ~/.private_env_vars ]; then
     source ~/.private_env_vars
 fi
 
-source /Users/mirko/.config/broot/launcher/bash/br
-
 # Initialize pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
 # eval "$(pyenv init - zsh)"
