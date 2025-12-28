@@ -194,17 +194,17 @@
     },
     "(": {
         "prefix": "lr(",
-        "body": "\\left( ${1:${TM_SELECTED_TEXT}} \\right)",
+        "body": "\\left( ${1} \\right)",
         "description": "left( ... right)"
     },
     "{": {
         "prefix": "lr{",
-        "body": "\\left\\{ ${1:${TM_SELECTED_TEXT}} \\right\\\\\\}",
+        "body": "\\left\\{ ${1} \\right\\\\\\}",
         "description": "left{ ... right}"
     },
     "[": {
         "prefix": "lr[",
-        "body": "\\left[ ${1:${TM_SELECTED_TEXT}} \\right]",
+        "body": "\\left[ ${1} \\right]",
         "description": "left[ ... right]"
     },
     "Columns": {
@@ -234,5 +234,19 @@
             "$0"
         ],
         "description": "Insert beamer frame"
+    },
+    "array": {
+        "prefix": "arr",
+        "body": [
+            "\\begin{array}{${1:c}}",
+            "\t${2}",
+            "\\end{array}"
+        ],
+        "description": "Insert a LaTeX array environment"
+    },
+    "mathrm": {
+        "prefix": "mr",
+        "body": "\\mathrm{${1}}",
+        "description": "Insert LaTeX \\mathrm{}"
     }
 }
