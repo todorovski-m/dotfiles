@@ -1,6 +1,7 @@
 -- Syntax checking (needed for fortran)
 return {
   "dense-analysis/ale",
+  ft = { "fortran" }, -- load only for Fortran files
   config = function()
     -- Configuration goes here.
     if vim.fn.has("macunix") == 1 then
