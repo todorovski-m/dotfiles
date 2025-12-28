@@ -62,7 +62,11 @@ keymap("v", "<", "<gv")
 keymap("v", ">", ">gv")
 
 -- Toggle comment
-vim.cmd("map <C-/> gcc")
+if vim.fn.has("macunix") == 1 then
+  vim.cmd("map <D-/> gcc")
+else
+  vim.cmd("map <C-/> gcc")
+end
 
 -- Save file
 if jit.os == "OSX" then
@@ -103,6 +107,7 @@ wk.add({
 
 -- Run files
 keymap("n", "<F5>", ":AsyncTask file-run<CR>")
+keymap("n", "<F6>", ":AsyncTask pytest<CR>")
 
 -- global marks
 -- local function keymap(mode, lhs, rhs, opts)
