@@ -15,6 +15,8 @@ if [[ $(uname) == "Darwin" ]]; then
   export CPLUS_INCLUDE_PATH="/Users/mirko/Documents/nlohmann-json":$CPLUS_INCLUDE_PATH
   export CPLUS_INCLUDE_PATH="/opt/homebrew/Cellar/libomp/20.1.3/include":$CPLUS_INCLUDE_PATH
   export LIBRARY_PATH="/opt/homebrew/Cellar/libomp/20.1.3/lib":$LIBRARY_PATH
+  export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+  export PATH="/opt/homebrew/lib/ruby/gems/3.4.0/bin:$PATH"
 fi
 if [[ $(uname) == "Linux" ]]; then
   export CPLUS_INCLUDE_PATH="/home/mirko/Documents/eigen-3.4.0":$CPLUS_INCLUDE_PATH
