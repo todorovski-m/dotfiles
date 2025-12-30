@@ -98,13 +98,6 @@ keymap("n", "N", "Nzz")
 -- Spell suggestions
 keymap("n", "<F7>", ":Telescope spell_suggest<CR>")
 
--- ChatGPT
-wk.add({
-  { "<leader>C", group = "ChatGPT" },
-  { "<leader>Cc", "<cmd>ChatGPT<CR>", desc = "ChatGPT" },
-  { "<leader>Ce", "<cmd>ChatGPTEditWithInstruction<CR>", desc = "Edit with instruction", mode = { "n", "v" } },
-})
-
 -- Run files
 keymap("n", "<F5>", ":AsyncTask file-run<CR>")
 keymap("n", "<F6>", ":AsyncTask pytest<CR>")
