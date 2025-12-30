@@ -94,12 +94,3 @@ eval "$(zoxide init zsh)"
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
-
-# >>> juliaup initialize >>>
-
-# !! Contents within this block are managed by juliaup !!
-
-path=('/Users/mirko/.juliaup/bin' $path)
-export PATH
-
-# <<< juliaup initialize <<<
