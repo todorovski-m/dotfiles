@@ -1,0 +1,21 @@
+# vim: ft=config
+
+theme = TokyoNight Moon
+
+# maximize = true
+window-height = 51
+window-width = 127
+
+background-opacity = 0.95
+background-blur = 16
+mouse-hide-while-typing = true
+
+cursor-style = bar
+cursor-style-blink = false
+shell-integration-features = no-cursor
+
+font-family = Hack Nerd Font Mono
+font-size = 16
+font-thicken = true
+font-thicken-strength = 1
+adjust-cell-height = 1
