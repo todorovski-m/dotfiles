@@ -3,6 +3,8 @@ require("config.lazy")
 
 require("lspconfig").fortls.setup({})
 
+require("config.functions")
+
 vim.api.nvim_set_hl(0, "SpellBad", {
   undercurl = false,
   underline = true,
