@@ -94,3 +94,6 @@ eval "$(zoxide init zsh)"
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
+
+# Added by Antigravity
+export PATH="/Users/mirko/.antigravity/antigravity/bin:$PATH"
