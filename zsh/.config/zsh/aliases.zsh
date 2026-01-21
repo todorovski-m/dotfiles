@@ -3,7 +3,7 @@ alias f='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd
 alias cp="cp -iv"
 alias mv="mv -iv"
 if [[ $(uname) = "Darwin" ]]; then
-    alias s="~/OneDrive/Mirko/sync_script/my_sync.sh"
+    alias s="~/Mirko/sync_script/my_sync.sh"
 else
     alias s="~/Dropbox/Mirko/sync_script/my_sync.sh"
 fi
