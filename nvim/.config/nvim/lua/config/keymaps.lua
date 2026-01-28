@@ -114,3 +114,29 @@ for i = 1, #prefixes do
     keymap("n", prefix .. lower_letter, prefix .. upper_letter, { desc = "Mark " .. upper_letter })
   end
 end
+
+-- Quickly open tag reference in a vertical split
+vim.keymap.set("n", "<leader>rt", ":vsplit ~/Mirko/REVIEW/tags_reference.md<CR>", { desc = "Review Tags" })
+wk.add({
+  { "<leader>r", group = "Review" },
+})
+
+-- Convert current markdown file to plain text using pandoc
+vim.keymap.set("n", "<leader>rc", function()
+  local file = vim.fn.expand("%") -- Current file name
+  local output = vim.fn.expand("%:r") .. ".txt" -- Same name, .txt extension
+
+  -- run pandoc:
+  -- --to=plain removes markdown syntax but keeps layout
+  -- --wrap=none prevents weird line breaks in journal text boxes
+  local cmd = string.format("pandoc %s --to=plain --wrap=none -o %s", file, output)
+
+  vim.fn.system(cmd)
+  if vim.v.shell_error == 0 then
+    vim.notify("Review converted to " .. output, vim.log.levels.INFO)
+    -- Open the converted .txt file in a vertical split
+    vim.cmd("vsplit " .. output)
+  else
+    vim.notify("Pandoc conversion failed", vim.log.levels.ERROR)
+  end
+end, { desc = "Convert markdown to text (pandoc)" })
