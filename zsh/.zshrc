@@ -73,10 +73,9 @@ if [ -f ~/.private_env_vars ]; then
 fi
 
 # Initialize pyenv
-export PATH="$HOME/.pyenv/bin:$PATH"
-# eval "$(pyenv init - zsh)"
-# eval "$(pyenv virtualenv-init -)"
-export PATH="$HOME/.pyenv/versions/3.10.16/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

@@ -76,3 +76,4 @@ disabled = false
 format = "[${symbol}${version}]($style)"
 style = "bold #FF8C00"
 symbol = " "
+pyenv_version_name = true
