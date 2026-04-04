@@ -8,7 +8,7 @@ else
     alias s="~/Dropbox/Mirko/sync_script/my_sync.sh"
 fi
 alias td="code ~/Dropbox/Mirko/todo/mirko.todo"
-alias cigla="ssh mirko@mirkot.synology.me"
+alias cigla="ssh -o LogLevel=ERROR mirko@100.118.233.99"
 alias cigla-sshfs="sshfs mirko@mirkot.synology.me:/ /home/mirko/cigla"
 alias zotero-sshfs="sshfs mirko@192.168.1.101:home/ZoteroFiles ~/ZoteroFiles"
 alias malina="ssh mirko@100.96.2.93"
