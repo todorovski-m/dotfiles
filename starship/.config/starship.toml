@@ -1,5 +1,6 @@
 format = """
 $directory\
+${custom.cloud}\
 $git_branch\
 $git_state\
 $git_status\
@@ -77,3 +78,9 @@ format = "[${symbol}${version}]($style)"
 style = "bold #FF8C00"
 symbol = " "
 pyenv_version_name = true
+
+[custom.cloud]
+command = "echo -n ' CLOUD'"
+when = '[[ $PWD == *OneDrive* || $PWD == *CloudStorage* || $PWD = *GoogleDrive* ]]'
+style = "bold fg:black bg:#FF8C00"
+format = "[$output]($style) "
