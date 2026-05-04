@@ -18,3 +18,11 @@ if vim.fn.has("macunix") == 1 then
         autocmd FileType python exe 'silent! compiler pyunit'
     ]])
 end
+
+-- Disable inlay hints for TeX files (toggle with <leader>uh)
+vim.api.nvim_create_autocmd("LspAttach", {
+  pattern = "*.tex",
+  callback = function(args)
+    vim.lsp.inlay_hint.enable(false, { bufnr = args.buf })
+  end,
+})
