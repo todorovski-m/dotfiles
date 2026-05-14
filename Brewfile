@@ -1,4 +1,6 @@
+tap "anomalyco/tap"
 tap "fortran-lang/fortran"
+tap "gromgit/brewtils"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "zegervdv/zathura"
@@ -12,12 +14,12 @@ brew "harfbuzz"
 brew "librsvg"
 # Icons for the GNOME project
 brew "adwaita-icon-theme"
-# New file format for still image compression
-brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
 # GNU compiler collection
 brew "gcc"
+# High performance message passing library
+brew "open-mpi"
 # Library for JPEG-2000 image manipulation
 brew "openjpeg"
 # Powerful descriptive vector graphics language
@@ -52,6 +54,8 @@ brew "fswatch"
 brew "fzf"
 # GNU awk utility
 brew "gawk"
+# New file format for still image compression
+brew "jpeg-xl"
 # GitHub command-line tool
 brew "gh"
 # Library for Linear and Mixed-Integer Programming
@@ -82,6 +86,8 @@ brew "lazygit"
 brew "libgit2@1.7"
 # Library for reading RAW files from digital photo cameras
 brew "libraw"
+# Find what models run on your hardware
+brew "llmfit"
 # Fast and user friendly build system
 brew "meson"
 # Programs that partition graphs and order matrices
@@ -92,6 +98,8 @@ brew "neovim"
 brew "node"
 # Suite of Sparse Matrix Software
 brew "suite-sparse"
+# Nonlinear and differential/algebraic equations solver
+brew "sundials"
 # High-level interpreted language for numerical computing
 brew "octave"
 # Scientific library for massively parallel optimization
@@ -146,16 +154,22 @@ brew "yt-dlp"
 brew "zellij"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # Fortran Package Manager (fpm)
 brew "fortran-lang/fortran/fpm"
+# Interactive TUI for Homebrew
+brew "gromgit/brewtils/taproom"
 # PDF viewer
-brew "zegervdv/zathura/zathura", args: ["with-synctex"]
+brew "zegervdv/zathura/zathura"
 # Poppler backend plugin for zathura
 brew "zegervdv/zathura/zathura-pdf-poppler"
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
 # Android SDK component
 cask "android-platform-tools"
+cask "font-fira-mono"
+cask "font-fira-sans"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
 # Menu bar manager
@@ -173,12 +187,15 @@ cask "whichspace"
 vscode "adriano-markovic.c-cpp-makefile-project"
 vscode "akamud.vscode-theme-onedark"
 vscode "akamud.vscode-theme-onelight"
+vscode "alefragnani.bookmarks"
+vscode "andrepimenta.claude-code-chat"
+vscode "anthropic.claude-code"
 vscode "astro-build.astro-vscode"
 vscode "catppuccin.catppuccin-vsc"
 vscode "coolchyni.beyond-debug"
 vscode "enkia.tokyo-night"
 vscode "fortran-lang.linter-gfortran"
-vscode "github.copilot-chat"
+vscode "github.github-vscode-theme"
 vscode "github.vscode-pull-request-github"
 vscode "james-yu.latex-workshop"
 vscode "janisdd.vscode-edit-csv"
@@ -189,12 +206,8 @@ vscode "ms-python.debugpy"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
 vscode "ms-python.vscode-python-envs"
-vscode "ms-toolsai.jupyter"
-vscode "ms-toolsai.jupyter-keymap"
-vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
 vscode "ms-vscode.cmake-tools"
+vscode "ms-vscode.cpp-devtools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
@@ -204,6 +217,7 @@ vscode "myriad-dreamin.tinymist"
 vscode "njpwerner.autodocstring"
 vscode "nvarner.typst-lsp"
 vscode "patricknasralla.tokyo-night-moon"
+vscode "qufiwefefwoyn.kanagawa"
 vscode "streetsidesoftware.code-spell-checker"
 vscode "teabyii.ayu"
 vscode "twxs.cmake"
