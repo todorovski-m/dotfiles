@@ -140,3 +140,19 @@ vim.keymap.set("n", "<leader>rc", function()
     vim.notify("Pandoc conversion failed", vim.log.levels.ERROR)
   end
 end, { desc = "Convert markdown to text (pandoc)" })
+
+local dap = require("dap")
+
+vim.keymap.set("n", "<D-F5>", dap.continue, { desc = "DAP Continue" })
+vim.keymap.set("n", "<F9>", dap.toggle_breakpoint, { desc = "DAP Breakpoint" })
+vim.keymap.set("n", "<F10>", dap.step_over, { desc = "DAP Step Over" })
+vim.keymap.set("n", "<F11>", dap.step_into, { desc = "DAP Step Into" })
+vim.keymap.set("n", "<D-F11>", dap.step_out, { desc = "DAP Step Out" })
+
+wk.add({
+  { "<leader>dc", desc = "Run/Continue → Cmd+F5" },
+  { "<leader>db", desc = "Toggle Breakpoint → F9" },
+  { "<leader>dO", desc = "Step Over → F10" },
+  { "<leader>di", desc = "Step Into → F11" },
+  { "<leader>do", desc = "Step Out → Cmd+F11" },
+})
