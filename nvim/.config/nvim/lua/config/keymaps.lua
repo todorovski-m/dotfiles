@@ -102,6 +102,8 @@ keymap("n", "<F7>", ":Telescope spell_suggest<CR>")
 keymap("n", "<F5>", ":AsyncTask file-run<CR>")
 keymap("n", "<F6>", ":AsyncTask pytest<CR>")
 
+keymap("n", "<leader>j", "gwip", { desc = "Format paragraph" })
+
 -- global marks
 -- local function keymap(mode, lhs, rhs, opts)
 local prefixes = "m'"
