@@ -8,10 +8,11 @@ else
     alias s="~/Dropbox/Mirko/sync_script/my_sync.sh"
 fi
 alias td="code ~/Dropbox/Mirko/todo/mirko.todo"
-alias cigla="ssh -o LogLevel=ERROR mirko@100.118.233.99"
+alias cigla='ssh cigla'
+alias malina='ssh malina'
+alias oblak='ssh oblak'
 alias cigla-sshfs="sshfs mirko@mirkot.synology.me:/ /home/mirko/cigla"
 alias zotero-sshfs="sshfs mirko@192.168.1.101:home/ZoteroFiles ~/ZoteroFiles"
-alias malina="ssh mirko@100.96.2.93"
 alias samo-monitor="arandr ~/.screenlayout/samo-nadvoresen.sh"
 alias gams-studio="~/programs/gams32.2_linux_x64_64_sfx/studio/studio.AppImage"
 alias lampp="sudo /opt/lampp/manager-linux-x64.run"
