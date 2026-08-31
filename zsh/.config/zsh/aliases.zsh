@@ -27,7 +27,7 @@ alias ytal="yt-dlp -o \"%(playlist_index)s-%(title)s.%(ext)s\" --extract-audio -
 if [[ $(uname) == "Darwin" ]]; then
     alias ls="eza -al --color=always --group-directories-first --icons"
 else
-    alias ls="exa -al --color=always --group-directories-first --icons"
+    alias ls="eza -al --color=always --group-directories-first --icons"
 fi
 
 alias f2jpg="f2 -r '{x.cdt.YYYY}/{x.cdt.YYYY}-{x.cdt.MM}/{x.cdt.YYYY}-{x.cdt.MM}-{x.cdt.DD}-{x.cdt.hh}-{x.cdt.mm}-{x.cdt.ss}{ext.lw}' -F"
