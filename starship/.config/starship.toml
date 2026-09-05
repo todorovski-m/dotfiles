@@ -1,4 +1,5 @@
 format = """
+$hostname \
 $directory\
 ${custom.cloud}\
 $git_branch\
@@ -7,7 +8,7 @@ $git_status\
 $git_metrics\
 $python\
 $fill\
-$cmd_duration $jobs $time $hostname\
+$cmd_duration $jobs $time\
 $line_break\
 $character"""
 
@@ -60,17 +61,10 @@ style = "bold #FF8C00"
 format = "[$time]($style)"
 time_format = "%k:%M"
 
-# [hostname]
-# ssh_only = false
-# format = "<[$hostname]($style)>"
-# trim_at = "-"
-# style = "bold dimmed white"
-# disabled = true
-
 [hostname]
 ssh_only = false
 format = "[❮]($style)[$hostname]($style)[❯]($style)"
-style = "blue"
+style = "bold dimmed blue"
 disabled = false
 
 [python]
