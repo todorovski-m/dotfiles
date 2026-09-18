@@ -26,6 +26,16 @@ compinit
 # source
 source $HOME/.config/zsh/aliases.zsh
 source $HOME/.config/zsh/exports.zsh
+
+autoload -U +X bashcompinit && bashcompinit
+source $HOME/.config/zsh/gita-completion.zsh
+
+# cd into a gita-registered repo by name
+gcd() {
+  cd "$(gita ls "$1")"
+}
+compctl -K _gita_completions gcd
+
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
     source $HOME/.config/zsh/keys.zsh
 fi
