@@ -6,7 +6,7 @@ return {
     opts = {
       invert_colors = "never",
       extra_args = {
-        "--input=preview=true",
+        "--input=x-preview=true",
       },
     },
     keys = {
