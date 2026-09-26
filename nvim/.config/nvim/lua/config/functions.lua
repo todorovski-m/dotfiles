@@ -30,6 +30,6 @@ vim.keymap.set("n", "<leader>ts", split_beamer_frame, { desc = "Split Beamer fra
 
 local wk = require("which-key")
 wk.add({
-  { "<leader>t", group = "Beamer / LaTeX" },
+  { "<leader>t", group = "LaTeX/Typst" },
   { "<leader>i", group = "LaTeX Preview" },
 })
