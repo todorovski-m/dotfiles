@@ -1,9 +1,10 @@
 tap "anomalyco/tap"
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "fortran-lang/fortran"
 tap "gromgit/brewtils"
+tap "homebrew-zathura/zathura", "https://github.com/homebrew-zathura/homebrew-zathura.git"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
-tap "zegervdv/zathura"
+tap "jolars/badness"
 # GNU debugger for aarch64-elf cross development
 brew "aarch64-elf-gdb"
 # XML-based font configuration API for X Windows
@@ -25,7 +26,7 @@ brew "openjpeg"
 # Powerful descriptive vector graphics language
 brew "asymptote"
 # Message bus system, providing inter-application communication
-brew "dbus", restart_service: :changed
+brew "dbus"
 # Protocol definitions and daemon for D-Bus at-spi
 brew "at-spi2-core"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -48,6 +49,8 @@ brew "czkawka"
 brew "eza"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Package manager and build system for Fortran
+brew "fpm"
 # Monitor a directory for changes and run a shell command
 brew "fswatch"
 # Command-line fuzzy finder written in Go
@@ -58,6 +61,8 @@ brew "gawk"
 brew "jpeg-xl"
 # GitHub command-line tool
 brew "gh"
+# Toolkit for creating graphical user interfaces
+brew "gtk+3"
 # Library for Linear and Mixed-Integer Programming
 brew "glpk"
 # GNU implementation of the famous stream editor
@@ -66,8 +71,8 @@ brew "gnu-sed"
 brew "gnupg"
 # Image processing tools collection
 brew "graphicsmagick"
-# Toolkit for creating graphical user interfaces
-brew "gtk+3"
+# Improved top (interactive process viewer)
+brew "htop"
 # Add GitHub support to git on the command-line
 brew "hub"
 # Configurable static site generator
@@ -92,6 +97,8 @@ brew "llmfit"
 brew "meson"
 # Programs that partition graphs and order matrices
 brew "metis"
+# NCurses Disk Usage
+brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Open-source, cross-platform JavaScript runtime environment
@@ -106,14 +113,20 @@ brew "octave"
 brew "pagmo"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
+# Pandoc filter for numbering and cross-referencing
+brew "pandoc-crossref"
 # Password manager
 brew "pass"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Object-relational database system
+brew "postgresql@16", restart_service: :changed, link: true
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Simple and powerful dual-screen PDF reader designed for presentations
+brew "pympress"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
 # Cross-platform application and UI framework
@@ -125,7 +138,7 @@ brew "ripgrep"
 # Utility that provides fast incremental file transfer
 brew "rsync"
 # Powerful, clean, object-oriented scripting language
-brew "ruby"
+brew "ruby", link: false
 # Package for graph partitioning, graph clustering, and sparse matrix ordering
 brew "scotch"
 # Display and control your Android device
@@ -136,8 +149,12 @@ brew "starship"
 brew "stockfish"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Open source continuous file synchronization application
+brew "syncthing", restart_service: :changed
 # Manipulate and query tags on macOS files
 brew "tag"
+# Services for Typst
+brew "tinymist"
 # Terminal multiplexer
 brew "tmux"
 # Parser generator tool
@@ -154,16 +171,8 @@ brew "yt-dlp"
 brew "zellij"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# The AI coding agent built for the terminal.
-brew "anomalyco/tap/opencode"
-# Fortran Package Manager (fpm)
-brew "fortran-lang/fortran/fpm"
-# Interactive TUI for Homebrew
-brew "gromgit/brewtils/taproom"
-# PDF viewer
-brew "zegervdv/zathura/zathura"
-# Poppler backend plugin for zathura
-brew "zegervdv/zathura/zathura-pdf-poppler"
+# Language server, formatter, and linter for LaTeX
+brew "jolars/badness/badness", trusted: true
 # Automatic tiling window manager similar to xmonad
 cask "amethyst"
 # Android SDK component
@@ -178,11 +187,17 @@ cask "jordanbaird-ice"
 cask "meld"
 # Tool to control external monitor brightness & volume
 cask "monitorcontrol"
+# Administration and development platform for PostgreSQL
+cask "pgadmin4"
+# GUI client for PostgreSQL databases
+cask "postico"
 # Menu bar indicator showing the currently selected space
 cask "spaceid"
 # Menu bar customization tool
 cask "swiftbar"
-# Active space menu bar icon
+# Menu bar toolkit with keep-awake, system monitor and volume mixer
+cask "vorssaint"
+# Menu bar utility for viewing and switching Spaces
 cask "whichspace"
 vscode "adriano-markovic.c-cpp-makefile-project"
 vscode "akamud.vscode-theme-onedark"
@@ -191,10 +206,12 @@ vscode "alefragnani.bookmarks"
 vscode "andrepimenta.claude-code-chat"
 vscode "anthropic.claude-code"
 vscode "astro-build.astro-vscode"
+vscode "bradlc.vscode-tailwindcss"
 vscode "catppuccin.catppuccin-vsc"
 vscode "coolchyni.beyond-debug"
 vscode "enkia.tokyo-night"
 vscode "fortran-lang.linter-gfortran"
+vscode "george-alisson.html-preview-vscode"
 vscode "github.github-vscode-theme"
 vscode "github.vscode-pull-request-github"
 vscode "james-yu.latex-workshop"
@@ -215,7 +232,6 @@ vscode "ms-vscode.makefile-tools"
 vscode "ms-vscode.sublime-keybindings"
 vscode "myriad-dreamin.tinymist"
 vscode "njpwerner.autodocstring"
-vscode "nvarner.typst-lsp"
 vscode "patricknasralla.tokyo-night-moon"
 vscode "qufiwefefwoyn.kanagawa"
 vscode "streetsidesoftware.code-spell-checker"
@@ -225,3 +241,6 @@ vscode "vadimcn.vscode-lldb"
 vscode "vscode-icons-team.vscode-icons"
 vscode "yzhang.markdown-all-in-one"
 vscode "zhuangtongfa.material-theme"
+npm "@mathjax/src"
+npm "mathjax-full"
+npm "pnpm"
