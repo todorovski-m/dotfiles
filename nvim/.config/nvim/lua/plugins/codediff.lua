@@ -30,7 +30,7 @@ return {
 
       -- Diff view behavior
       diff = {
-        layout = "inline", -- Diff layout: "side-by-side" (two panes) or "inline" (single pane with virtual lines)
+        layout = "side-by-side", -- Diff layout: "side-by-side" (two panes) or "inline" (single pane with virtual lines)
         disable_inlay_hints = true, -- Disable inlay hints in diff windows for cleaner view
         max_computation_time_ms = 5000, -- Maximum time for diff computation (VSCode default)
         hide_merge_artifacts = false, -- Hide merge tool temp files (*.orig, *.BACKUP.*, *.BASE.*, *.LOCAL.*, *.REMOTE.*)
@@ -65,13 +65,13 @@ return {
           prev_file = "[f", -- Previous file in explorer mode
           diff_get = "dg", -- Get change from other buffer
           diff_put = "dp", -- Put change to other buffer
+          toggle_stage = "-", -- Stage/unstage selected file
         },
         explorer = {
           select = "<CR>", -- Open diff for selected file
           hover = "K", -- Show file diff preview
           refresh = "R", -- Refresh git status
           toggle_view_mode = "i", -- Toggle between 'list' and 'tree' views
-          toggle_stage = "-", -- Stage/unstage selected file
           stage_all = "S", -- Stage all files
           unstage_all = "U", -- Unstage all files
           restore = "X", -- Discard changes (restore file)
