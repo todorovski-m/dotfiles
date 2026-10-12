@@ -118,7 +118,12 @@ for i = 1, #prefixes do
 end
 
 -- Quickly open tag reference in a vertical split
-vim.keymap.set("n", "<leader>rt", ":vsplit ~/Mirko/REVIEW/tags_reference.md<CR>", { desc = "Review Tags" })
+vim.keymap.set(
+  "n",
+  "<leader>rt",
+  ":vsplit ~/Mirko/research/Obsidian/Review/tags_reference.md<CR>",
+  { desc = "Review Tags" }
+)
 wk.add({
   { "<leader>r", group = "Review" },
 })
