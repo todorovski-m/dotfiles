@@ -36,6 +36,13 @@ gcd() {
 }
 compctl -K _gita_completions gcd
 
+# start or reattach a per-folder tmux session running Claude Code with remote
+# control, resuming the last conversation
+cc() {
+  tmux new -A -s "claude-${PWD##*/}" -c "$PWD" \
+    "claude --continue --remote-control || claude --remote-control"
+}
+
 if [[ $TERM_PROGRAM != "WarpTerminal" ]]; then
     source $HOME/.config/zsh/keys.zsh
 fi
