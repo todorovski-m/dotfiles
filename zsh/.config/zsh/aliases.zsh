@@ -14,6 +14,7 @@ fi
 alias cigla='ssh cigla'
 alias malina='ssh malina'
 alias oblak='ssh oblak'
+alias oblak-tailscale='ssh oblak-tailscale'
 alias scigla="sftp mirko@100.118.233.99"
 
 alias ds="dropbox status"
