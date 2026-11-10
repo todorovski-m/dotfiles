@@ -8,7 +8,7 @@ alias empty="find . -empty -type d -not -path '*/.git*' -not -path '*/.stfolder'
 if [[ $(uname) = "Darwin" ]]; then
     alias s="~/Mirko/sync_script/my_sync.sh"
 else
-    alias s="~/Dropbox/Mirko/sync_script/my_sync.sh"
+    alias s="~/Mirko/sync_script/my_sync.sh"
 fi
 
 alias cigla='ssh cigla'
@@ -26,9 +26,9 @@ alias yta="yt-dlp -o '%(title)s.%(ext)s' --extract-audio --audio-format mp3 --au
 alias ytal="yt-dlp -o \"%(playlist_index)s-%(title)s.%(ext)s\" --extract-audio --audio-format mp3 --audio-quality 0 --embed-thumbnail --ignore-errors"
 
 if [[ $(uname) == "Darwin" ]]; then
-    alias ls="eza -al --color=always --group-directories-first --icons"
+    alias ls='eza -alh --group-directories-first --icons --git --header --time-style=long-iso --sort=modified --reverse'
 else
-    alias ls="eza -al --color=always --group-directories-first --icons"
+    alias ls='eza -alh --group-directories-first --icons --git --header --time-style=long-iso --sort=modified --reverse'
 fi
 
 alias f2jpg="f2 -r '{x.cdt.YYYY}/{x.cdt.YYYY}-{x.cdt.MM}/{x.cdt.YYYY}-{x.cdt.MM}-{x.cdt.DD}-{x.cdt.hh}-{x.cdt.mm}-{x.cdt.ss}{ext.lw}' -F"
