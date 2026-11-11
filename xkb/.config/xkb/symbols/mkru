@@ -1,0 +1,14 @@
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+    include "mk(basic)"
+    name[Group1]= "Russian (Macedonia)";
+    key <AD03> { [       Cyrillic_ie,       Cyrillic_IE,  Cyrillic_io, Cyrillic_IO ]   }; // Ё <Alt Gr>+Е (latin E)
+    key <AC07> { [   Cyrillic_shorti,   Cyrillic_SHORTI  ]   }; // Й Ј (latin J)
+    key <AD12> { [    Cyrillic_shcha,    Cyrillic_SHCHA  ]   }; // Щ Ѓ (latin })
+    key <AD06> { [     Cyrillic_yeru,     Cyrillic_YERU  ]   }; // Ы Ѕ (latin Y)
+    key <AB02> { [ Cyrillic_softsign, Cyrillic_SOFTSIGN,  Cyrillic_hardsign,  Cyrillic_HARDSIGN  ]   }; // Ь Џ, Ъ <Alt Gr>+Џ (latin X)
+    key <AC11> { [        Cyrillic_e,        Cyrillic_E  ]   }; // Э Ќ (latin ")
+    key <AD02> { [       Cyrillic_yu,       Cyrillic_YU  ]   }; // Ю Њ (latin W)
+    key <AD01> { [       Cyrillic_ya,       Cyrillic_YA  ]   }; // Я Љ (latin Q)
+    key <TLDE> { [           grave,      asciitilde ]   };
+};

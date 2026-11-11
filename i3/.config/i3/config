@@ -170,10 +170,8 @@ bindsym $mod+e exec thunderbird
 bindsym $mod+Shift+p exec $HOME/programs/vscode/bin/code
 bindsym $mod+f exec caja
 bindsym $mod+t exec $HOME/programs/Telegram/Telegram
-bindsym $mod+z exec xdg-open `cat $HOME/Dropbox/Mirko/bookmark`
+bindsym $mod+z exec xdg-open `cat $HOME/Mirko/bookmark`
 bindsym $mod+g exec $HOME/.config/greek/greek.sh
-bindsym $mod+c exec foliate ~/win-data/knigi/chess/Irving\ Chernev\ -\ Logical\ Chess\ -\ Move\ By\ Move.epub
-bindsym $mod+Shift+c exec $HOME/Dropbox/Mirko/Razno/chess/chernev-open.sh
 bindsym $mod+l exec $HOME/.config/scripts/predavanja.sh
 bindsym $mod+m exec $HOME/.config/rofi/rofi-network-manager/rofi-network-manager.sh
 bindsym $mod+Shift+t exec $HOME/.config/scripts/two_monitors.py
