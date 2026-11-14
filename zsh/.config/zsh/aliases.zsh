@@ -5,11 +5,7 @@ alias du="du -h"
 alias tm="tmux new -A -s main"
 alias empty="find . -empty -type d -not -path '*/.git*' -not -path '*/.stfolder'"
 
-if [[ $(uname) = "Darwin" ]]; then
-    alias s="~/Mirko/sync_script/my_sync.sh"
-else
-    alias s="~/Mirko/sync_script/my_sync.sh"
-fi
+alias s="~/Mirko/sync_script/backup.sh"
 
 alias cigla='ssh cigla'
 alias malina='ssh malina'
