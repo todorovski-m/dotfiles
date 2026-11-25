@@ -31,7 +31,7 @@ local function init_vimtex()
         autocmd BufRead,BufNewFile *.tex setlocal textwidth=80
         autocmd BufRead,BufNewFile *.tex setlocal spell
         autocmd BufRead,BufNewFile *.tex setlocal tabstop=4 shiftwidth=4
-        autocmd User VimtexEventQuit call vimtex#compiler#clean(0)
+        " autocmd User VimtexEventQuit call vimtex#compiler#clean(0)
     augroup end
     ]])
 
